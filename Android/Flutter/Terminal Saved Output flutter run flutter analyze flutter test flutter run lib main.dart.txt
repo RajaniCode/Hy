@@ -1,0 +1,512 @@
+Last login: Sat Jan 18 21:47:59 on ttys002
+rajaniapple@Rajanis-MacBook-Pro ~ % sw_vers
+ProductName:		macOS
+ProductVersion:		15.1
+BuildVersion:		24B83
+rajaniapple@Rajanis-MacBook-Pro ~ % arch
+arm64
+rajaniapple@Rajanis-MacBook-Pro ~ % cd $HOME/Desktop/Flutter/Flutter                                                                  
+rajaniapple@Rajanis-MacBook-Pro Flutter % flutter create flutter_dart_app
+Creating project flutter_dart_app...
+Resolving dependencies in `flutter_dart_app`... (1.0s)
+Downloading packages... 
+Got dependencies in `flutter_dart_app`.
+Wrote 130 files.
+
+All done!
+You can find general documentation for Flutter at: https://docs.flutter.dev/
+Detailed API documentation is available at: https://api.flutter.dev/
+If you prefer video documentation, consider: https://www.youtube.com/c/flutterdev
+
+In order to run your application, type:
+
+  $ cd flutter_dart_app
+  $ flutter run
+
+Your application code is in flutter_dart_app/lib/main.dart.
+
+The configured version of Java detected may conflict with the Gradle version in your new Flutter app.
+
+To keep the default AGP version Gradle version 8.3, download a compatible Java version
+(Java 17 <= (Java 17 <= compatible Java version < Java 21) Java version < Java 21). Configure this Java version
+globally for Flutter by running:
+
+  flutter config --jdk-dir=<JDK_DIRECTORY>
+
+
+Alternatively, to continue using your configured Java version, update the Gradle
+version specified in the following file to a compatible Gradle version (compatible Gradle version range: 8.4 - 8.7):
+/Users/rajaniapple/Desktop/Flutter/Flutter/flutter_dart_app/android/gradle/wrapper/gradle-wrapper.properties
+
+You may also update the Gradle version used by running
+`./gradlew wrapper --gradle-version=<COMPATIBLE_GRADLE_VERSION>`.
+
+See
+https://docs.gradle.org/current/userguide/compatibility.html#java for details
+on compatible Java/Gradle versions, and see
+https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper
+for more details on using the Gradle Wrapper command to update the Gradle version
+used.
+
+
+
+rajaniapple@Rajanis-MacBook-Pro Flutter % cd flutter_dart_app
+rajaniapple@Rajanis-MacBook-Pro flutter_dart_app % flutter run
+Connected devices:
+sdk gphone64 arm64 (mobile)     • emulator-5554                        • android-arm64  • Android 15 (API 35) (emulator)
+iPhone 16 Pro Max (mobile)      • 954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7 • ios            • com.apple.CoreSimulator.SimRuntime.iOS-18-2
+(simulator)
+macOS (desktop)                 • macos                                • darwin-arm64   • macOS 15.1 24B83 darwin-arm64
+Mac Designed for iPad (desktop) • mac-designed-for-ipad                • darwin         • macOS 15.1 24B83 darwin-arm64
+Chrome (web)                    • chrome                               • web-javascript • Google Chrome 131.0.6778.265
+
+No wireless devices were found.
+
+[1]: sdk gphone64 arm64 (emulator-5554)
+[2]: iPhone 16 Pro Max (954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7)
+[3]: macOS (macos)
+[4]: Mac Designed for iPad (mac-designed-for-ipad)
+[5]: Chrome (chrome)
+Please choose one (or "q" to quit): 1
+Launching lib/main.dart on sdk gphone64 arm64 in debug mode...
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+Running Gradle task 'assembleDebug'...                            163.9s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...          650ms
+I/flutter (16257): [IMPORTANT:flutter/shell/platform/android/android_context_vk_impeller.cc(60)] Using the Impeller rendering backend (Vulkan).
+Syncing files to device sdk gphone64 arm64...                      182ms
+
+Flutter run key commands.
+r Hot reload. 🔥🔥🔥
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on sdk gphone64 arm64 is available at: http://127.0.0.1:51175/v3PJGmpYEjU=/
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 144
+The Flutter DevTools debugger and profiler on sdk gphone64 arm64 is available at:
+http://127.0.0.1:9100?uri=http://127.0.0.1:51175/v3PJGmpYEjU=/
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 151
+I/lutter_dart_app(16257): Compiler allocated 5250KB to compile void android.view.ViewRootImpl.performTraversals()
+D/ProfileInstaller(16257): Installing profile for com.example.flutter_dart_app
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 157
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 160
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 161
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 165
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 166
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 167
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 168
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 164
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 151
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 157
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 160
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 161
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 165
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 166
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 167
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 168
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 164
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 151
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 157
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 160
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 161
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 165
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 166
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 167
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 168
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 164
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 151
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 157
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 160
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 161
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 165
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 166
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 167
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 168
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 164
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 151
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 157
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 160
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 161
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 165
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 166
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 167
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 168
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 164
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 151
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 157
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 160
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 169
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 161
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 165
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 166
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 167
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 164
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 151
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 157
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 160
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 168
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 161
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 165
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 166
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 167
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 164
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 151
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 157
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 160
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 168
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 161
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 165
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 166
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 167
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 164
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 151
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 157
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 160
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 168
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 161
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 165
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 166
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 167
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 164
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 151
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 157
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 160
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 168
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 161
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 165
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 166
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 167
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 164
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 151
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 157
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 160
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 168
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 161
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 165
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 166
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 167
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 164
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 151
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 157
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 160
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 168
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 161
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 165
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 166
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 167
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 164
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 151
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 157
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 160
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 168
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 161
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 165
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 166
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 167
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 164
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 151
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 157
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 160
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 168
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 161
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b07d0 hos timage handle 0x70002000000bf
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 165
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0450 hos timage handle 0x70002000000b4
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 166
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1add10 hos timage handle 0x70002000000b5
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 167
+I/MESA    (16257): exportSyncFdForQSRILocked: call for image 0xb40000752c1b0310 hos timage handle 0x70002000000ba
+I/MESA    (16257): exportSyncFdForQSRILocked: got fd: 144
+D/VRI[MainActivity](16257): visibilityChanged oldVisibility=true newVisibility=false
+Application finished.
+the Dart compiler exited unexpectedly.
+rajaniapple@Rajanis-MacBook-Pro flutter_dart_app % flutter run
+Connected devices:
+sdk gphone64 arm64 (mobile)     • emulator-5554                        • android-arm64  • Android 15 (API 35) (emulator)
+iPhone 16 Pro Max (mobile)      • 954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7 • ios            • com.apple.CoreSimulator.SimRuntime.iOS-18-2
+(simulator)
+macOS (desktop)                 • macos                                • darwin-arm64   • macOS 15.1 24B83 darwin-arm64
+Mac Designed for iPad (desktop) • mac-designed-for-ipad                • darwin         • macOS 15.1 24B83 darwin-arm64
+Chrome (web)                    • chrome                               • web-javascript • Google Chrome 131.0.6778.265
+
+No wireless devices were found.
+
+[1]: sdk gphone64 arm64 (emulator-5554)
+[2]: iPhone 16 Pro Max (954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7)
+[3]: macOS (macos)
+[4]: Mac Designed for iPad (mac-designed-for-ipad)
+[5]: Chrome (chrome)
+Please choose one (or "q" to quit): 2
+Launching lib/main.dart on iPhone 16 Pro Max in debug mode...
+Running Xcode build...                                                  
+ └─Compiling, linking and signing...                         5.1s
+Xcode build done.                                           14.0s
+Syncing files to device iPhone 16 Pro Max...                        28ms
+
+Flutter run key commands.
+r Hot reload. 🔥🔥🔥
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on iPhone 16 Pro Max is available at: http://127.0.0.1:51595/OljfhZQ48iQ=/
+The Flutter DevTools debugger and profiler on iPhone 16 Pro Max is available at:
+http://127.0.0.1:9100?uri=http://127.0.0.1:51595/OljfhZQ48iQ=/
+Application finished.
+the Dart compiler exited unexpectedly.
+rajaniapple@Rajanis-MacBook-Pro flutter_dart_app % flutter run
+Connected devices:
+sdk gphone64 arm64 (mobile)     • emulator-5554                        • android-arm64  • Android 15 (API 35) (emulator)
+iPhone 16 Pro Max (mobile)      • 954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7 • ios            • com.apple.CoreSimulator.SimRuntime.iOS-18-2
+(simulator)
+macOS (desktop)                 • macos                                • darwin-arm64   • macOS 15.1 24B83 darwin-arm64
+Mac Designed for iPad (desktop) • mac-designed-for-ipad                • darwin         • macOS 15.1 24B83 darwin-arm64
+Chrome (web)                    • chrome                               • web-javascript • Google Chrome 131.0.6778.265
+
+No wireless devices were found.
+
+[1]: sdk gphone64 arm64 (emulator-5554)
+[2]: iPhone 16 Pro Max (954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7)
+[3]: macOS (macos)
+[4]: Mac Designed for iPad (mac-designed-for-ipad)
+[5]: Chrome (chrome)
+Please choose one (or "q" to quit): 3
+Launching lib/main.dart on macOS in debug mode...
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:macOS, arch:arm64, id:00006000-0006095914D8801E, name:My Mac }
+{ platform:macOS, arch:x86_64, id:00006000-0006095914D8801E, name:My Mac }
+warning: Run script build phase 'Run Script' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'Flutter Assemble' from project 'Runner')
+Building macOS application...                                           
+✓ Built build/macos/Build/Products/Debug/flutter_dart_app.app
+2025-01-18 22:09:37.358 flutter_dart_app[15996:217395] +[IMKClient subclass]: chose IMKClient_Modern
+2025-01-18 22:09:37.358 flutter_dart_app[15996:217395] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+Syncing files to device macOS...                                    35ms
+
+Flutter run key commands.
+r Hot reload. 🔥🔥🔥
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on macOS is available at: http://127.0.0.1:51891/UEH9-0O0hQk=/
+The Flutter DevTools debugger and profiler on macOS is available at: http://127.0.0.1:9100?uri=http://127.0.0.1:51891/UEH9-0O0hQk=/
+Application finished.
+the Dart compiler exited unexpectedly.
+rajaniapple@Rajanis-MacBook-Pro flutter_dart_app % flutter run
+Connected devices:
+sdk gphone64 arm64 (mobile)     • emulator-5554                        • android-arm64  • Android 15 (API 35) (emulator)
+iPhone 16 Pro Max (mobile)      • 954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7 • ios            • com.apple.CoreSimulator.SimRuntime.iOS-18-2
+(simulator)
+macOS (desktop)                 • macos                                • darwin-arm64   • macOS 15.1 24B83 darwin-arm64
+Mac Designed for iPad (desktop) • mac-designed-for-ipad                • darwin         • macOS 15.1 24B83 darwin-arm64
+Chrome (web)                    • chrome                               • web-javascript • Google Chrome 131.0.6778.265
+
+No wireless devices were found.
+
+[1]: sdk gphone64 arm64 (emulator-5554)
+[2]: iPhone 16 Pro Max (954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7)
+[3]: macOS (macos)
+[4]: Mac Designed for iPad (mac-designed-for-ipad)
+[5]: Chrome (chrome)
+Please choose one (or "q" to quit): 4
+Mac Designed for iPad is currently not supported for flutter run -d.
+rajaniapple@Rajanis-MacBook-Pro flutter_dart_app % flutter run
+Connected devices:
+sdk gphone64 arm64 (mobile)     • emulator-5554                        • android-arm64  • Android 15 (API 35) (emulator)
+iPhone 16 Pro Max (mobile)      • 954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7 • ios            • com.apple.CoreSimulator.SimRuntime.iOS-18-2
+(simulator)
+macOS (desktop)                 • macos                                • darwin-arm64   • macOS 15.1 24B83 darwin-arm64
+Mac Designed for iPad (desktop) • mac-designed-for-ipad                • darwin         • macOS 15.1 24B83 darwin-arm64
+Chrome (web)                    • chrome                               • web-javascript • Google Chrome 131.0.6778.265
+
+No wireless devices were found.
+
+[1]: sdk gphone64 arm64 (emulator-5554)
+[2]: iPhone 16 Pro Max (954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7)
+[3]: macOS (macos)
+[4]: Mac Designed for iPad (mac-designed-for-ipad)
+[5]: Chrome (chrome)
+Please choose one (or "q" to quit): 4
+Mac Designed for iPad is currently not supported for flutter run -d.
+rajaniapple@Rajanis-MacBook-Pro flutter_dart_app % flutter run
+Launching lib/main.dart on iPad Pro 13-inch (M4) in debug mode...
+Running Xcode build...                                                  
+ └─Compiling, linking and signing...                         3.5s
+Xcode build done.                                            8.3s
+Syncing files to device iPad Pro 13-inch (M4)...                    27ms
+
+Flutter run key commands.
+r Hot reload. 🔥🔥🔥
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on iPad Pro 13-inch (M4) is available at: http://127.0.0.1:52604/E4dH2cX82hk=/
+The Flutter DevTools debugger and profiler on iPad Pro 13-inch (M4) is available at:
+http://127.0.0.1:9100?uri=http://127.0.0.1:52604/E4dH2cX82hk=/
+Lost connection to device.
+rajaniapple@Rajanis-MacBook-Pro flutter_dart_app % flutter analyze
+Analyzing flutter_dart_app...                                           
+No issues found! (ran in 5.9s)
+rajaniapple@Rajanis-MacBook-Pro flutter_dart_app % flutter test
+00:05 +1: All tests passed!                                                                                                                
+rajaniapple@Rajanis-MacBook-Pro flutter_dart_app % flutter run lib/main.dart
+Connected devices:
+macOS (desktop)                 • macos                 • darwin-arm64   • macOS 15.1 24B83 darwin-arm64
+Mac Designed for iPad (desktop) • mac-designed-for-ipad • darwin         • macOS 15.1 24B83 darwin-arm64
+Chrome (web)                    • chrome                • web-javascript • Google Chrome 131.0.6778.265
+
+No wireless devices were found.
+
+[1]: macOS (macos)
+[2]: Mac Designed for iPad (mac-designed-for-ipad)
+[3]: Chrome (chrome)
+Please choose one (or "q" to quit): 3
+Launching lib/main.dart on Chrome in debug mode...
+Waiting for connection from debug service on Chrome...              8.2s
+This app is linked to the debug service: ws://127.0.0.1:52742/Y4ftl3lEwj4=/ws
+Debug service listening on ws://127.0.0.1:52742/Y4ftl3lEwj4=/ws
+
+🔥  To hot restart changes while running, press "r" or "R".
+For a more detailed help message, press "h". To quit, press "q".
+
+A Dart VM Service on Chrome is available at: http://127.0.0.1:52742/Y4ftl3lEwj4=
+The Flutter DevTools debugger and profiler on Chrome is available at: http://127.0.0.1:9100?uri=http://127.0.0.1:52742/Y4ftl3lEwj4=
+Application finished.
+rajaniapple@Rajanis-MacBook-Pro flutter_dart_app % 

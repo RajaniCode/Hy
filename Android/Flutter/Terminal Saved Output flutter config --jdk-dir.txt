@@ -1,0 +1,23 @@
+Last login: Sat Jan 18 21:22:24 on ttys001
+rajaniapple@Rajanis-MacBook-Pro ~ % sw_vers                          
+ProductName:		macOS
+ProductVersion:		15.1
+BuildVersion:		24B83
+rajaniapple@Rajanis-MacBook-Pro ~ % arch
+arm64
+rajaniapple@Rajanis-MacBook-Pro ~ % cd $HOME/Desktop/Flutter/Flutter                                                          
+rajaniapple@Rajanis-MacBook-Pro Flutter % flutter --version
+Flutter 3.27.2 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision 68415ad1d9 (5 days ago) • 2025-01-13 10:22:03 -0800
+Engine • revision e672b006cb
+Tools • Dart 3.6.1 • DevTools 2.40.2
+rajaniapple@Rajanis-MacBook-Pro Flutter % dart --version
+Dart SDK version: 3.6.1 (stable) (Tue Jan 7 09:50:00 2025 -0800) on "macos_arm64"
+rajaniapple@Rajanis-MacBook-Pro Flutter % flutter config --jdk-dir="$HOME/Downloads/Software/OpenJDK/JDK21.0.2/jdk-21.0.2.jdk/Contents/Home" 
+Setting "jdk-dir" value to "/Users/rajaniapple/Downloads/Software/OpenJDK/JDK21.0.2/jdk-21.0.2.jdk/Contents/Home".
+
+You may need to restart any open editors for them to read new settings.
+rajaniapple@Rajanis-MacBook-Pro Flutter % 
+
+
+
