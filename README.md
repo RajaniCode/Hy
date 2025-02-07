@@ -12,7 +12,7 @@ Hybrid
 Credits
 -------
 [![image](
-Credits/flutter.dev.svg)](https://flutter.dev/) 
+Credits/flutter.dev.svg)](https://flutter.dev/)  
 [![image](
 Credits/opensource.google.svg)](https://opensource.google/)  
 [![image](
