@@ -1,0 +1,597 @@
+###########################################################################################################################
+
+# Flutter # Dart
+
+###########################################################################################################################
+***************************************************************************************************************************
+[
+% cd $HOME
+]
+
+% mkdir -p Flutter
+
+% cd Flutter
+
+# Verify zsh was set as the default macOS shell
+% dscl . -read ~/ UserShell
+
+# The command should print the following as its response
+UserShell: /bin/zsh
+
+# Flutter components require the Rosetta translation process on Macs running Apple silicon # Type A and press return to agree: A
+[
+% sudo softwareupdate --install-rosetta
+]
+% softwareupdate --install-rosetta
+[
+I have read and agree to the terms of the software license agreement. A list of Apple SLAs may be found here: https://www.apple.com/legal/sla/
+Type A and press return to agree: A
+2025-01-18 21:01:42.511 softwareupdate[10862:138393] Package Authoring Error: 072-12453: Package reference com.apple.pkg.RosettaUpdateAuto is missing installKBytes attribute
+Install of Rosetta 2 finished successfully
+]
+***************************************************************************************************************************
+
+# Download then install Flutter
+
+***************************************************************************************************************************
+# https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.27.2-stable.zip
+# Create a folder where you can install Flutter at ~/development/
+% mkdir -p ~/development/
+
+# Extract the file into the directory you want to store the Flutter SDK
+% unzip ~/Downloads/Software/Flutter/flutter_macos_arm64_3.27.2-stable.zip -d ~/development/
+
+# When finished, the Flutter SDK should be in the ~/development/flutter directory
+% ls ~/development/flutter
+
+# Add Flutter to PATH
+% echo 'export PATH="$HOME/development/flutter/bin:$PATH"' >> ~/.zshenv
+
+% cat  ~/.zshenv
+[
+export PATH="$HOME/development/flutter/bin:$PATH"
+]
+
+# Configure iOS development
+[
+# Download and install Xcode to debug and compile native Swift or ObjectiveC code
+# To develop Flutter apps for desktop, install Xcode to compile to native bytecode
+]
+# Configure the command-line tools to use the installed version of Xcode
+% sudo sh -c 'xcode-select -s /Applications/Xcode.app/Contents/Developer && xcodebuild -runFirstLaunch'
+
+# Use this path for the latest version of Xcode # agree
+% sudo xcodebuild -license
+
+# Install CocoaPods
+# CocoaPods to compile and enable Flutter plugins in your native apps
+# If your apps depend on Flutter plugins with native desktop code, install CocoaPods
+# This program bundles various dependencies across Flutter and desktop code
+[
+% gem --version
+% sudo gem install cocoapods
+# Add cocoapods to your PATH
+% gem which cocoapods
+]
+% pod --version
+
+# Terminal New Window
+# Run Flutter doctor
+# The flutter doctor command validates that all components of a complete Flutter development environment for macOS
+# Verify the installation of all the components
+% flutter --version
+
+[
+% where flutter
+% whereis flutter
+% which flutter
+% type flutter
+]
+
+% flutter doctor
+[
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel stable, 3.27.2, on macOS 15.1 24B83 darwin-arm64, locale en-US)
+[!] Android toolchain - develop for Android devices (Android SDK version 35.0.1)
+    ! Some Android licenses not accepted. To resolve this, run: flutter doctor --android-licenses
+[✓] Xcode - develop for iOS and macOS (Xcode 16.2)
+[✓] Chrome - develop for the web
+[✓] Android Studio (version 2024.2)
+[✓] IntelliJ IDEA Ultimate Edition (version 2023.1.4)
+[✓] VS Code (version 1.96.3)
+[✓] Connected device (3 available)
+[✓] Network resources
+
+! Doctor found issues in 1 category.
+]
+
+# Troubleshoot Flutter doctor issues
+% flutter doctor -v
+[
+[✓] Flutter (Channel stable, 3.27.2, on macOS 15.1 24B83 darwin-arm64, locale en-US)
+    • Flutter version 3.27.2 on channel stable at /Users/rajaniapple/development/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 68415ad1d9 (5 days ago), 2025-01-13 10:22:03 -0800
+    • Engine revision e672b006cb
+    • Dart version 3.6.1
+    • DevTools version 2.40.2
+
+[!] Android toolchain - develop for Android devices (Android SDK version 35.0.1)
+    • Android SDK at /Users/rajaniapple/Library/Android/sdk
+    • Platform android-35, build-tools 35.0.1
+    • Java binary at: /Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 21.0.4+-12422083-b607.1)
+    ! Some Android licenses not accepted. To resolve this, run: flutter doctor --android-licenses
+
+[✓] Xcode - develop for iOS and macOS (Xcode 16.2)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Build 16C5032a
+    • CocoaPods version 1.16.2
+
+[✓] Chrome - develop for the web
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[✓] Android Studio (version 2024.2)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 21.0.4+-12422083-b607.1)
+
+[✓] IntelliJ IDEA Ultimate Edition (version 2023.1.4)
+    • IntelliJ at /Applications/IntelliJ IDEA.app
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+
+[✓] VS Code (version 1.96.3)
+    • VS Code at /Users/rajaniapple/Downloads/Software/VisualStudioCode/Visual Studio Code.app/Contents
+    • Flutter extension can be installed from:
+      🔨 https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
+
+[✓] Connected device (3 available)
+    • macOS (desktop)                 • macos                 • darwin-arm64   • macOS 15.1 24B83 darwin-arm64
+    • Mac Designed for iPad (desktop) • mac-designed-for-ipad • darwin         • macOS 15.1 24B83 darwin-arm64
+    • Chrome (web)                    • chrome                • web-javascript • Google Chrome 131.0.6778.265
+
+[✓] Network resources
+    • All expected network resources are available.
+]
+
+% flutter doctor --android-licenses
+
+% flutter doctor -v
+[
+[✓] Flutter (Channel stable, 3.27.2, on macOS 15.1 24B83 darwin-arm64, locale en-US)
+    • Flutter version 3.27.2 on channel stable at /Users/rajaniapple/development/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 68415ad1d9 (5 days ago), 2025-01-13 10:22:03 -0800
+    • Engine revision e672b006cb
+    • Dart version 3.6.1
+    • DevTools version 2.40.2
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 35.0.1)
+    • Android SDK at /Users/rajaniapple/Library/Android/sdk
+    • Platform android-35, build-tools 35.0.1
+    • Java binary at: /Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 21.0.4+-12422083-b607.1)
+    • All Android licenses accepted.
+
+[✓] Xcode - develop for iOS and macOS (Xcode 16.2)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Build 16C5032a
+    • CocoaPods version 1.16.2
+
+[✓] Chrome - develop for the web
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[✓] Android Studio (version 2024.2)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 21.0.4+-12422083-b607.1)
+
+[✓] IntelliJ IDEA Ultimate Edition (version 2023.1.4)
+    • IntelliJ at /Applications/IntelliJ IDEA.app
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+
+[✓] VS Code (version 1.96.3)
+    • VS Code at /Users/rajaniapple/Downloads/Software/VisualStudioCode/Visual Studio Code.app/Contents
+    • Flutter extension can be installed from:
+      🔨 https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
+
+[✓] Connected device (3 available)
+    • macOS (desktop)                 • macos                 • darwin-arm64   • macOS 15.1 24B83 darwin-arm64
+    • Mac Designed for iPad (desktop) • mac-designed-for-ipad • darwin         • macOS 15.1 24B83 darwin-arm64
+    • Chrome (web)                    • chrome                • web-javascript • Google Chrome 131.0.6778.265
+
+[✓] Network resources
+    • All expected network resources are available.
+
+• No issues found!
+]
+
+# Flutter SDK includes the full Dart SDK
+% dart --version
+
+[
+% where dart
+% whereis dart
+% which dart
+% type dart
+]
+***************************************************************************************************************************
+
+# flutter: The Flutter command-line tool
+
+***************************************************************************************************************************
+[
+% cd $HOME
+]
+
+% flutter --version
+
+[
+% dart --version
+]
+
+[
+% flutter create flutter_dart_app
+
+The configured version of Java detected may conflict with the Gradle version in your new Flutter app.
+
+To keep the default AGP version Gradle version 8.3, download a compatible Java version
+(Java 17 <= (Java 17 <= compatible Java version < Java 21) Java version < Java 21). Configure this Java version
+globally for Flutter by running:
+
+  flutter config --jdk-dir=<JDK_DIRECTORY>
+]
+// Java 21
+// OpenJDK 21
+% flutter config --jdk-dir="$HOME/Downloads/Software/OpenJDK/JDK21.0.2/jdk-21.0.2.jdk/Contents/Home"
+
+# Restart any open editors for them to read new settings
+
+# Terminal New Window
+% flutter create flutter_dart_app
+                                                                                       
+% cd flutter_dart_app
+===========================================================================================================================
+
+# Terminal New Window # Android Emulator
+
+===========================================================================================================================
+% export PATH="$HOME/Library/Android/sdk/emulator/":$PATH
+% emulator -version
+% emulator -list-avds
+% emulator -avd Medium_Phone_API_35
+===========================================================================================================================
+
+# Terminal New Window # Xcode Simulator
+
+===========================================================================================================================
+[
+# iPhone # iPad # Simulator
+% export PATH="/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/":$PATH
+# Default
+% Simulator
+% xcodebuild -version
+% xcrun simctl list 
+# iPhone 16 Pro Max
+% Simulator -CurrentDeviceUDID 954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7
+[
+# iPad mini (A17 Pro)
+% Simulator -CurrentDeviceUDID 0122EF72-BF74-4341-A0E6-384CFC6DD5C7
+# flutter run
+Please choose one (or "q" to quit): 4
+Mac Designed for iPad is currently not supported for flutter run -d.
+]
+# iPad Pro 13-inch (M4)
+% Simulator -CurrentDeviceUDID D3155C1B-74DC-4FAC-973B-9482A31771C0
+]
+===========================================================================================================================
+
+# Terminal Window # flutter_dart_app flutter run
+
+===========================================================================================================================
+% flutter run
+[
+[1]: sdk gphone64 arm64 (emulator-5554)
+[2]: iPhone 16 Pro Max (954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7)
+[3]: macOS (macos)
+# [4]: Mac Designed for iPad (mac-designed-for-ipad) 
+# Mac Designed for iPad is currently not supported for flutter run -d
+# iPad Pro 13-inch (M4)
+# Launching lib/main.dart on iPad Pro 13-inch (M4) in debug mode...
+[5]: Chrome (chrome)
+Please choose one (or "q" to quit): 
+]
+
+% flutter analyze
+
+% flutter test
+
+% flutter run lib/main.dart
+===========================================================================================================================
+***************************************************************************************************************************
+
+# Android Studio app 
+
+***************************************************************************************************************************
+
+# Build Android Studio app from the command line # RajanimacOSAndroid # gradlew # adb
+[
+% cd $HOME
+]
+
+# Install the app using Gradle install tasks
+% ./gradlew tasks
+
+% ./gradlew assembleDebug
+
+# % ./gradlew installDebug
+[
+# No connected devices!
+]
+# Terminal New Window
+# cmdline-tools
+% ls $HOME//Library/Android/sdk/cmdline-tools/12.0/bin
+% ls $HOME//Library/Android/sdk/cmdline-tools/5.0/bin
+
+# avd
+% ls $HOME/.android/avd
+
+# emulator
+% ls $HOME/Library/Android/sdk/emulator
+
+% export PATH="$HOME/Library/Android/sdk/emulator/":$PATH
+% emulator -version
+
+# emulator -avd <avd_name>
+% emulator -avd Medium_Phone_API_35
+
+# Original Terminal Window
+% ./gradlew installDebug
+
+
+# Install the app using the adb tool
+% export PATH="$HOME/Library/Android/sdk/platform-tools/":$PATH
+% adb --version
+
+# adb install <path/to/your_app.apk>
+% ls app/build/outputs/apk/debug/app-debug.apk
+% adb install app/build/outputs/apk/debug/app-debug.apk
+
+
+
+% ls $HOME/Projects/RajanimacOSiOSXcodeSwift
+
+% xcodebuild -version
+
+% xcodebuild archive -project SwiftyJSONdemo.xcodeproj -scheme SwiftyJSONdemo -archivePath Archive/SwiftyJSONdemo.xcarchive
+
+
+# xcrun simctl # Command line utility to control the Simulator
+% xcrun simctl list  
+[
+== Device Types ==
+iPhone 16 Pro (com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro)
+iPhone 16 Pro Max (com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro-Max)
+iPhone 16 (com.apple.CoreSimulator.SimDeviceType.iPhone-16)
+iPhone 16 Plus (com.apple.CoreSimulator.SimDeviceType.iPhone-16-Plus)
+iPhone 15 Pro (com.apple.CoreSimulator.SimDeviceType.iPhone-15-Pro)
+iPhone 15 Pro Max (com.apple.CoreSimulator.SimDeviceType.iPhone-15-Pro-Max)
+iPhone 15 (com.apple.CoreSimulator.SimDeviceType.iPhone-15)
+iPhone 15 Plus (com.apple.CoreSimulator.SimDeviceType.iPhone-15-Plus)
+iPhone 14 Pro (com.apple.CoreSimulator.SimDeviceType.iPhone-14-Pro)
+iPhone 14 Pro Max (com.apple.CoreSimulator.SimDeviceType.iPhone-14-Pro-Max)
+iPhone 14 (com.apple.CoreSimulator.SimDeviceType.iPhone-14)
+iPhone 14 Plus (com.apple.CoreSimulator.SimDeviceType.iPhone-14-Plus)
+iPhone SE (3rd generation) (com.apple.CoreSimulator.SimDeviceType.iPhone-SE-3rd-generation)
+iPhone 13 Pro (com.apple.CoreSimulator.SimDeviceType.iPhone-13-Pro)
+iPhone 13 Pro Max (com.apple.CoreSimulator.SimDeviceType.iPhone-13-Pro-Max)
+iPhone 13 (com.apple.CoreSimulator.SimDeviceType.iPhone-13)
+iPhone 13 mini (com.apple.CoreSimulator.SimDeviceType.iPhone-13-mini)
+iPhone 12 Pro (com.apple.CoreSimulator.SimDeviceType.iPhone-12-Pro)
+iPhone 12 Pro Max (com.apple.CoreSimulator.SimDeviceType.iPhone-12-Pro-Max)
+iPhone 12 (com.apple.CoreSimulator.SimDeviceType.iPhone-12)
+iPhone 12 mini (com.apple.CoreSimulator.SimDeviceType.iPhone-12-mini)
+iPhone SE (2nd generation) (com.apple.CoreSimulator.SimDeviceType.iPhone-SE--2nd-generation-)
+iPhone 11 Pro (com.apple.CoreSimulator.SimDeviceType.iPhone-11-Pro)
+iPhone 11 Pro Max (com.apple.CoreSimulator.SimDeviceType.iPhone-11-Pro-Max)
+iPhone 11 (com.apple.CoreSimulator.SimDeviceType.iPhone-11)
+iPhone Xʀ (com.apple.CoreSimulator.SimDeviceType.iPhone-XR)
+iPhone Xs (com.apple.CoreSimulator.SimDeviceType.iPhone-XS)
+iPhone Xs Max (com.apple.CoreSimulator.SimDeviceType.iPhone-XS-Max)
+iPhone X (com.apple.CoreSimulator.SimDeviceType.iPhone-X)
+iPhone 8 (com.apple.CoreSimulator.SimDeviceType.iPhone-8)
+iPhone 8 Plus (com.apple.CoreSimulator.SimDeviceType.iPhone-8-Plus)
+iPhone 7 (com.apple.CoreSimulator.SimDeviceType.iPhone-7)
+iPhone 7 Plus (com.apple.CoreSimulator.SimDeviceType.iPhone-7-Plus)
+iPhone SE (1st generation) (com.apple.CoreSimulator.SimDeviceType.iPhone-SE)
+iPhone 6s (com.apple.CoreSimulator.SimDeviceType.iPhone-6s)
+iPhone 6s Plus (com.apple.CoreSimulator.SimDeviceType.iPhone-6s-Plus)
+iPad Pro 11-inch (M4) (16GB) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-M4-16GB)
+iPad Pro 11-inch (M4) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-M4-8GB)
+iPad Pro 13-inch (M4) (16GB) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M4-16GB)
+iPad Pro 13-inch (M4) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M4-8GB)
+iPad Air 11-inch (M2) (com.apple.CoreSimulator.SimDeviceType.iPad-Air-11-inch-M2)
+iPad Air 13-inch (M2) (com.apple.CoreSimulator.SimDeviceType.iPad-Air-13-inch-M2)
+iPad mini (A17 Pro) (com.apple.CoreSimulator.SimDeviceType.iPad-mini-A17-Pro)
+iPad Pro (11-inch) (4th generation) (16GB) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-4th-generation-16GB)
+iPad Pro (11-inch) (4th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-4th-generation-8GB)
+iPad Pro (12.9-inch) (6th generation) (16GB) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-12-9-inch-6th-generation-16GB)
+iPad Pro (12.9-inch) (6th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-12-9-inch-6th-generation-8GB)
+iPad (10th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-10th-generation)
+iPad Air (5th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Air-5th-generation)
+iPad mini (6th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-mini-6th-generation)
+iPad Pro (11-inch) (3rd generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-3rd-generation)
+iPad Pro (12.9-inch) (5th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-12-9-inch-5th-generation)
+iPad (9th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-9th-generation)
+iPad Air (4th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Air--4th-generation-)
+iPad (8th generation) (com.apple.CoreSimulator.SimDeviceType.iPad--8th-generation-)
+iPad Air (3rd generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Air--3rd-generation-)
+iPad mini (5th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-mini--5th-generation-)
+iPad Pro (11-inch) (2nd generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--11-inch---2nd-generation-)
+iPad Pro (12.9-inch) (4th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---4th-generation-)
+iPad Pro (11-inch) (1st generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--11-inch-)
+iPad Pro (12.9-inch) (3rd generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---3rd-generation-)
+iPad (7th generation) (com.apple.CoreSimulator.SimDeviceType.iPad--7th-generation-)
+iPad Pro (10.5-inch) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--10-5-inch-)
+iPad Pro (12.9-inch) (2nd generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---2nd-generation-)
+iPad (6th generation) (com.apple.CoreSimulator.SimDeviceType.iPad--6th-generation-)
+iPad Pro (9.7-inch) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--9-7-inch-)
+iPad Pro (12.9-inch) (1st generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro)
+iPad (5th generation) (com.apple.CoreSimulator.SimDeviceType.iPad--5th-generation-)
+iPad Air 2 (com.apple.CoreSimulator.SimDeviceType.iPad-Air-2)
+iPad mini 4 (com.apple.CoreSimulator.SimDeviceType.iPad-mini-4)
+Apple TV 4K (3rd generation) (com.apple.CoreSimulator.SimDeviceType.Apple-TV-4K-3rd-generation-4K)
+Apple TV 4K (3rd generation) (at 1080p) (com.apple.CoreSimulator.SimDeviceType.Apple-TV-4K-3rd-generation-1080p)
+Apple TV 4K (2nd generation) (com.apple.CoreSimulator.SimDeviceType.Apple-TV-4K-2nd-generation-4K)
+Apple TV 4K (2nd generation) (at 1080p) (com.apple.CoreSimulator.SimDeviceType.Apple-TV-4K-2nd-generation-1080p)
+Apple TV 4K (com.apple.CoreSimulator.SimDeviceType.Apple-TV-4K-4K)
+Apple TV 4K (at 1080p) (com.apple.CoreSimulator.SimDeviceType.Apple-TV-4K-1080p)
+Apple TV (com.apple.CoreSimulator.SimDeviceType.Apple-TV-1080p)
+Apple Watch Series 10 (46mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-10-46mm)
+Apple Watch Series 10 (42mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-10-42mm)
+Apple Watch Series 9 (45mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-9-45mm)
+Apple Watch Series 9 (41mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-9-41mm)
+Apple Watch Ultra 2 (49mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Ultra-2-49mm)
+Apple Watch Series 8 (45mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-8-45mm)
+Apple Watch Series 8 (41mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-8-41mm)
+Apple Watch Ultra (49mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Ultra-49mm)
+Apple Watch SE (44mm) (2nd generation) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-SE-44mm-2nd-generation)
+Apple Watch SE (40mm) (2nd generation) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-SE-40mm-2nd-generation)
+Apple Watch Series 7 (45mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-7-45mm)
+Apple Watch Series 7 (41mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-7-41mm)
+Apple Watch Series 6 (44mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-6-44mm)
+Apple Watch Series 6 (40mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-6-40mm)
+Apple Watch SE (44mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-SE-44mm)
+Apple Watch SE (40mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-SE-40mm)
+Apple Watch Series 5 (44mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-5-44mm)
+Apple Watch Series 5 (40mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-5-40mm)
+Apple Watch Series 4 (44mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-4-44mm)
+Apple Watch Series 4 (40mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-4-40mm)
+Apple Watch Series 3 (42mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-3-42mm)
+Apple Watch Series 3 (38mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-3-38mm)
+Apple Watch Series 2 (42mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-2-42mm)
+Apple Watch Series 2 (38mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-2-38mm)
+Apple Vision Pro (com.apple.CoreSimulator.SimDeviceType.Apple-Vision-Pro)
+iPod touch (7th generation) (com.apple.CoreSimulator.SimDeviceType.iPod-touch--7th-generation-)
+== Runtimes ==
+iOS 18.2 (18.2 - 22C150) - com.apple.CoreSimulator.SimRuntime.iOS-18-2
+== Devices ==
+-- iOS 18.2 --
+    iPhone 16 Pro (626E102C-617D-4ACB-B1CD-C09ED566134E) (Shutdown) 
+    iPhone 16 Pro Max (954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7) (Booted) 
+    iPhone 16 (30D40CD8-3350-4C59-88A0-64147FEAB72D) (Shutdown) 
+    iPhone 16 Plus (1777CC21-B0BA-45B6-B542-EB1F791E7998) (Shutdown) 
+    iPhone SE (3rd generation) (86D552BD-B8A3-4176-B2DB-3D06E7DBD339) (Shutdown) 
+    iPad Pro 11-inch (M4) (F9D979C8-CFF7-45B4-9B80-08F77CAF5E3D) (Shutdown) 
+    iPad Pro 13-inch (M4) (D3155C1B-74DC-4FAC-973B-9482A31771C0) (Shutdown) 
+    iPad Air 11-inch (M2) (8CD91DC1-5CBF-412C-A796-512A72200857) (Shutdown) 
+    iPad Air 13-inch (M2) (64ADE9F6-8CF3-4BC5-A991-48A2D02809A9) (Shutdown) 
+    iPad mini (A17 Pro) (0122EF72-BF74-4341-A0E6-384CFC6DD5C7) (Shutdown) 
+    iPad (10th generation) (7AE336FD-7EB8-45BD-B539-2F90B2DF5A50) (Shutdown) 
+== Device Pairs ==
+]
+
+/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator -CurrentDeviceUDID <DEVICE-ID>
+/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator -CurrentDeviceUDID 954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+###########################################################################################################################
+
+# # .NET Multi-platform App UI (MAUI) Blazor Hybrid app with a Blazor Web App
+
+###########################################################################################################################
+***************************************************************************************************************************
+[
+% cd $HOME
+]
+
+% mkdir -p HybridBlazor
+
+% cd HybridBlazor
+
+% dotnet --version
+
+[
+% sudo dotnet workload update
+]
+
+% sudo dotnet workload install maui
+
+% dotnet workload list
+[
+Installed Workload Id      Manifest Version      Installation Source
+--------------------------------------------------------------------
+android                    35.0.24/9.0.100       SDK 9.0.100        
+maui                       9.0.14/9.0.100        SDK 9.0.100        
+wasm-tools                 9.0.1/9.0.100         SDK 9.0.100        
+
+Use `dotnet workload search` to find additional workloads to install.
+]
+
+# Solution from the project template
+% dotnet new maui-blazor-web -o MauiBlazorWeb -I Server
+
+% ls
+
+% cd MauiBlazorWeb
+
+% dotnet list package
+
+% dotnet list MauiBlazorWeb.csproj package
+
+MauiBlazorWeb/MauiBlazorWeb.Shared/Pages/Home.razor
+# <h1>Hola, Rajani!</h1>
+
+# MauiBlazorWeb.csproj
+<TargetFrameworks>net9.0-android;net9.0-ios;net9.0-maccatalyst</TargetFrameworks>
+<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-windows10.0.19041.0</TargetFrameworks>
+
+% dotnet build -t:Run -f net9.0-ios
+
+% dotnet build -t:Run -f net9.0-android
+
+% dotnet build -t:Run -f net9.0-maccatalyst
+
+% cd ../MauiBlazorWeb.Web
+
+% dotnet list MauiBlazorWeb.Web.csproj package
+
+% dotnet run
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+// Credits
+/*
+https://dart.dev/
+https://flutter.dev/
+https://api.flutter.dev/
+https://developer.android.com/
+https://android.com/
+https://kotlinlang.org/
+https://swift.org/)
+https://developer.apple.com/
+https://apple.com/
+https://dotnet.microsoft.com/
+https://developer.microsoft.com/
+https://microsoft.com/
+https://cocoapods.org/
+https://rubygems.org/
+https://gradle.org/
+https://docs.flutter.dev/
+https://learn.microsoft.com/
+*/
