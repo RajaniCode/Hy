@@ -1,8 +1,6 @@
 C#
 --
 
-- C#
-
 - Blazor
 
 - .NET MAUI
