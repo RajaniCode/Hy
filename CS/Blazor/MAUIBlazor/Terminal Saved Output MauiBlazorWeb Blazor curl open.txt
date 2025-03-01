@@ -1,0 +1,42 @@
+Last login: Thu Feb 27 03:47:23 on ttys001
+rajaniapple@Rajanis-MacBook-Pro ~ % curl http://localhost:5275/
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <link rel="stylesheet" href="_content/MauiBlazorWeb.Shared/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="_content/MauiBlazorWeb.Shared/app.css">
+    <link rel="stylesheet" href="MauiBlazorWeb.Web.styles.css">
+    <link rel="icon" type="image/png" href="_content/MauiBlazorWeb.Shared/favicon.png">
+    <!--Blazor:{"type":"server","prerenderId":"8a4ed55505364046964e9aa8389ab06c","key":{"locationHash":"77D12F14A8105320B1AAED6AE7E689DA0EC4483270A645E84079EAA0FFDF550D:5","formattedComponentKey":""},"sequence":0,"descriptor":"CfDJ8M/lKp/Tjh1HlmCZkc3F1ZFebPv0XGE3W\u002BO8Dlw\u002BaKvoyEo4tZaJgDSCsYrNL38LgBiHl6Rq7lsQ9Gmm9i/YaSCS8dY0IA6r6EeM88l2/uWy86h0sLMPpVwerXBUAhbQvFdWIfpUQc5dCUm6WVP7kA8FL7hG5M3PTnWHScRXailOTQlanzfIATeUd82N1dmTs4ZOgaaATLuBTEfY5Xpx/Wd3QJ5GroXPYGSILomWIzJCrRoqQc6v/EgiCG5IBp039iYAosIRWIEswCaMM4lCbLkL27OFm8LtGGoSjq98WhgPhqGqNLanYg1PipDz9nxbNBB8N5jgFaRAf4t1YC1Q0i5SYwolYeKldEs43zKRcMkYQZoSV7s3zMpaHkVnPdQ5lhbDw6lVYCdQ4jNwI3Ic6bQOqS2j54tUDAPbznDdQr\u002BV4SR/pwChYWF6C4etfpecR94VYdLMrJHTOjozDiEpqLGYGrxMq/buwUQ3Kmnf2OL59ULtvd115KAq/FyQjqsYGE3EK59ldoEglubiz0EkVu/\u002Bm\u002BSOIZz0lHITPS8\u002BKSPsYHIOVfrXI6xtDwgDnEjL9C1f0qvzzA9G9ZsHGvh7VyA="}--><title>Home</title><!--Blazor:{"prerenderId":"8a4ed55505364046964e9aa8389ab06c"}--></head>
+
+<body><!--Blazor:{"type":"server","prerenderId":"dc9b0248492e4cd09ed418cdf5b458f7","key":{"locationHash":"6E687BC0EAA2CEA81DE80C7E8805C7556051D59AAC821085BC0BF2DA6A5F95CC:8","formattedComponentKey":""},"sequence":1,"descriptor":"CfDJ8M/lKp/Tjh1HlmCZkc3F1ZEe2KJPZCtNJB75Nd69EroMxEj\u002BATLW/eM51V8FgWxrtEvwPCJFciQI6CnV0bGd2mYU\u002BHDkn0IM96GJ0ZPf\u002Bc3aci0Wk7LGUWkI/ZqD/0uJvQ3dSbaSFly9djTzeFqdOlQnmn9H7oSJkHDCUkNsbOzQ\u002B2Wwb6wAYJbIrGybwM7tjyBQmhLOLDq\u002Bxjd7FtbJAax4qwv4L8\u002BSfQXQxWOiMxMigW4NRjLisfWGCUpcRFFNBVtPJ5nWU0KsDv87hCREH1cygIz2zE0UhGHAA4U/JcRkY/aHZjy2xo6ZMtocX/pKInG7rQDnmfwuznXxFWSvNReY2fo54gxmSgnJc2KgJPXoARSCEK0corXYqtPjyS6bdJ\u002B7esWubDTGCS5rXi3sBBiHlZEGoLGPCP6nLoB9h/Mtcmm\u002BGtQbnkV7XYVmMa\u002BSpU/oAlBe8OFm/gTlHtzP46ovpXfliuj/Lia/QZbsLMEFW/01TQp/5GukodcpNTIwJ/DXqUru3y0jlo8USqkUH7LYLSRXk5Dg3S7/\u002BorVijV3"}--><div class="page" b-8ivnkwynjc><div class="sidebar" b-8ivnkwynjc><div class="top-row ps-3 navbar navbar-dark" b-97tjx7a4j4><div class="container-fluid" b-97tjx7a4j4><a class="navbar-brand" href b-97tjx7a4j4>MauiBlazorWeb</a></div></div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" b-97tjx7a4j4>
+
+<div class="nav-scrollable" onclick="document.querySelector(&#x27;.navbar-toggler&#x27;).click()" b-97tjx7a4j4><nav class="flex-column" b-97tjx7a4j4><div class="nav-item px-3" b-97tjx7a4j4><a href="" class="nav-link active" aria-current="page"><span class="bi bi-house-door-fill-nav-menu" aria-hidden="true" b-97tjx7a4j4></span> Home
+            </a></div>
+
+        <div class="nav-item px-3" b-97tjx7a4j4><a href="counter" class="nav-link"><span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" b-97tjx7a4j4></span> Counter
+            </a></div>
+
+        <div class="nav-item px-3" b-97tjx7a4j4><a href="weather" class="nav-link"><span class="bi bi-list-nested-nav-menu" aria-hidden="true" b-97tjx7a4j4></span> Weather
+            </a></div></nav></div></div>
+
+    <main b-8ivnkwynjc><div class="top-row px-4" b-8ivnkwynjc><a href="https://learn.microsoft.com/aspnet/core/" target="_blank" b-8ivnkwynjc>About</a></div>
+
+        <article class="content px-4" b-8ivnkwynjc>
+
+<h1>Rajani, C#.NET MAUI Blazor Web!</h1>
+
+Welcome to your new app running on <em>Web</em> using <em>Unix 15.1.0</em>.
+
+</article></main></div>
+
+<div id="blazor-error-ui" data-nosnippet b-8ivnkwynjc>
+    An unhandled error has occurred.
+    <a href="." class="reload" b-8ivnkwynjc>Reload</a>
+    <span class="dismiss" b-8ivnkwynjc>🗙</span></div>
+        <!--Blazor:{"prerenderId":"dc9b0248492e4cd09ed418cdf5b458f7"}-->
+    <script src="_framework/blazor.web.js"></script></body></html><!--Blazor-Server-Component-State:CfDJ8M/lKp/Tjh1HlmCZkc3F1ZGtbfKrBGYPlaJehmXqj6Pr9nK05E7q09E+r8mxmYSf8nFhdYyRD/eoqjmPu460GC1VhR/xVLPpQ3SNT8JLxKp3otweNDosjVp77PzbDZ/DpwyupcZnznlAB++qoyGXUs3mHVoh1K1U0xRh4/eGn9LjZ0iHoSlJCRwrG3amCCCRMoQN8OvVsHo68S/tVp9vqz38LENGU9/A1ikrq+NH5wxF1L1ICEOPsAm0l227scV9wTu+iHgk+PjWwv5DUdQkFt7u2Ud/q/B9BWi7nSIg/uy6f0n+2QOfKPzHbp/qS3URLMoS3SoeaY0KP0s+nnrYd+4rpi/2817LId5vLOvCEzL3PMgKDgCbzBQ/XvC1OTpCOADkerwQk2iM1u3yfYMIYMtv+mwh2LVC54xvnN2HN9GJ/UAkjk8nKI686U6IoM3ZQH0EM/uoSl2YqKem47KLidPUgG9mHinOq9meTOHXUJalyt3WzO7eaOU0nAFhEubNqdF9gYrtoXqBsqCjJbCIr/p2yY14aOk7ynonMkwuRj5W-->%                                    rajaniapple@Rajanis-MacBook-Pro ~ % open http://localhost:5275/
+rajaniapple@Rajanis-MacBook-Pro ~ % 

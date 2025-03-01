@@ -1,0 +1,217 @@
+Last login: Thu Feb 27 03:35:07 on ttys000
+rajaniapple@Rajanis-MacBook-Pro ~ % ls $HOME/Library/Android/sdk/cmdline-tools
+12.0	5.0	7.0
+rajaniapple@Rajanis-MacBook-Pro ~ % ls $HOME/Library/Android/sdk/cmdline-tools/12.0
+NOTICE.txt		bin			lib			package.xml		source.properties
+rajaniapple@Rajanis-MacBook-Pro ~ % ls $HOME/Library/Android/sdk/cmdline-tools/12.0/bin
+apkanalyzer		lint			resourceshrinker	screenshot2
+avdmanager		profgen			retrace			sdkmanager
+rajaniapple@Rajanis-MacBook-Pro ~ % ls $HOME/Library/Android/sdk/system-images  
+android-35
+rajaniapple@Rajanis-MacBook-Pro ~ % ls $HOME/Library/Android/sdk/system-images/android-35
+default			google_apis		google_apis_playstore
+rajaniapple@Rajanis-MacBook-Pro ~ % ls $HOME/Library/Android/sdk/system-images/android-35/default
+arm64-v8a
+rajaniapple@Rajanis-MacBook-Pro ~ % ls $HOME/Library/Android/sdk/system-images/android-35/default/arm64-v8a
+NOTICE.txt			data				package.xml			vendor.img
+VerifiedBootParams.textproto	encryptionkey.img		ramdisk.img
+advancedFeatures.ini		kernel-ranchu			source.properties
+build.prop			kernel_cmdline.txt		system.img
+rajaniapple@Rajanis-MacBook-Pro ~ % ls $HOME/Library/Android/sdk/system-images/android-35/google_apis
+arm64-v8a
+rajaniapple@Rajanis-MacBook-Pro ~ % ls $HOME/Library/Android/sdk/system-images/android-35/google_apis/arm64-v8a
+NOTICE.txt			data				package.xml			vendor.img
+VerifiedBootParams.textproto	encryptionkey.img		ramdisk.img
+advancedFeatures.ini		kernel-ranchu			source.properties
+build.prop			kernel_cmdline.txt		system.img
+rajaniapple@Rajanis-MacBook-Pro ~ % ls $HOME/Library/Android/sdk/system-images/android-35/google_apis_playstore
+arm64-v8a	arm64-v8a-2
+rajaniapple@Rajanis-MacBook-Pro ~ % ls $HOME/Library/Android/sdk/system-images/android-35/google_apis_playstore/arm64-v8a
+rajaniapple@Rajanis-MacBook-Pro ~ % ls $HOME/Library/Android/sdk/system-images/android-35/google_apis_playstore/arm64-v8a-2
+NOTICE.txt			data				package.xml			vendor.img
+VerifiedBootParams.textproto	encryptionkey.img		ramdisk.img
+advancedFeatures.ini		kernel-ranchu			source.properties
+build.prop			kernel_cmdline.txt		system.img
+rajaniapple@Rajanis-MacBook-Pro ~ % export PATH="$HOME/Library/Android/sdk/cmdline-tools/5.0/bin/":$PATH
+rajaniapple@Rajanis-MacBook-Pro ~ % avdmanager
+
+Usage:
+      avdmanager [global options] [action] [action options]
+      Global options:
+  -s --silent     : Silent mode, shows errors only.
+  -v --verbose    : Verbose mode, shows errors, warnings and all messages.
+     --clear-cache: Clear the SDK Manager repository manifest cache.
+  -h --help       : Help on a specific command.
+
+Valid actions are composed of a verb and an optional direct object:
+-   list              : Lists existing targets or virtual devices.
+-   list avd          : Lists existing Android Virtual Devices.
+-   list target       : Lists existing targets.
+-   list device       : Lists existing devices.
+- create avd          : Creates a new Android Virtual Device.
+-   move avd          : Moves or renames an Android Virtual Device.
+- delete avd          : Deletes an Android Virtual Device.
+rajaniapple@Rajanis-MacBook-Pro ~ % avdmanager create avd -n Android_35_Arm64_V8a -k "system-images;android-35;google_apis;arm64-v8a"
+Warning: This version only understands SDK XML versions up to 2 but an SDK XML file of version 3 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+Warning: unexpected element (uri:"", local:"base-extension"). Expected elements are <{}codename>,<{}layoutlib>,<{}api-level>
+Warning: unexpected element (uri:"", local:"base-extension"). Expected elements are <{}codename>,<{}layoutlib>,<{}api-level>
+Warning: unexpected element (uri:"", local:"extension-level"). Expected elements are <{}codename>,<{}layoutlib>,<{}api-level>
+Warning: unexpected element (uri:"", local:"base-extension"). Expected elements are <{}codename>,<{}layoutlib>,<{}api-level>
+Warning: unexpected element (uri:"", local:"extension-level"). Expected elements are <{}codename>,<{}layoutlib>,<{}api-level>
+Warning: unexpected element (uri:"", local:"base-extension"). Expected elements are <{}codename>,<{}layoutlib>,<{}api-level>
+Warning: unexpected element (uri:"", local:"extension-level"). Expected elements are <{}codename>,<{}layoutlib>,<{}api-level>
+Warning: unexpected element (uri:"", local:"base-extension"). Expected elements are <{}codename>,<{}layoutlib>,<{}api-level>
+Warning: unexpected element (uri:"", local:"extension-level"). Expected elements are <{}codename>,<{}layoutlib>,<{}api-level>
+Warning: Errors limit exceeded. To receive all errors set com.sun.xml.bind logger to FINEST level.
+Warning: unexpected element (uri:"", local:"base-extension"). Expected elements are <{}codename>,<{}layoutlib>,<{}api-level>
+Warning: Observed package id 'system-images;android-35;google_apis_playstore;arm64-v8a' in inconsistent location '/Users/rajaniapple/Library/Android/sdk/system-images/android-35/google_apis_playstore/arm64-v8a-2' (Expected '/Users/rajaniapple/Library/Android/sdk/system-images/android-35/google_apis_playstore/arm64-v8a')
+Auto-selecting single ABI arm64-v8a=====] 100% Fetch remote repository...       
+Do you wish to create a custom hardware profile? [no] 
+rajaniapple@Rajanis-MacBook-Pro ~ % ls $HOME/.android/avd
+Android_35_Arm64_V8a.avd	Android_35_Arm64_V8a.ini
+rajaniapple@Rajanis-MacBook-Pro ~ % export PATH="$HOME/Library/Android/sdk/emulator/":$PATH
+rajaniapple@Rajanis-MacBook-Pro ~ % emulator -version
+INFO         | Android emulator version 35.3.11.0 (build_id 12836668) (CL:N/A)
+INFO         | Graphics backend: gfxstream
+Android emulator version 35.3.11.0 (build_id 12836668) (CL:N/A)
+Copyright (C) 2006-2024 The Android Open Source Project and many others.
+This program is a derivative of the QEMU CPU emulator (www.qemu.org).
+
+  This software is licensed under the terms of the GNU General Public
+  License version 2, as published by the Free Software Foundation, and
+  may be copied, distributed, and modified under those terms.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+rajaniapple@Rajanis-MacBook-Pro ~ % emulator -list-avds
+Android_35_Arm64_V8a
+rajaniapple@Rajanis-MacBook-Pro ~ % emulator -avd Android_35_Arm64_V8a
+INFO         | Android emulator version 35.3.11.0 (build_id 12836668) (CL:N/A)
+INFO         | Graphics backend: gfxstream
+INFO         | Found systemPath /Users/rajaniapple/Library/Android/sdk/system-images/android-35/google_apis/arm64-v8a/
+INFO         | Increasing RAM size to 2048MB
+INFO         | Checking system compatibility:
+INFO         |   Checking: hasSufficientDiskSpace
+INFO         |      Ok: Disk space requirements to run avd: `Android_35_Arm64_V8a` are met.
+INFO         |   Checking: hasSufficientHwGpu
+INFO         |      Ok: Hardware GPU requirements to run avd: `Android_35_Arm64_V8a` are passed.
+INFO         |   Checking: hasSufficientSystem
+INFO         |      Ok: System requirements to run avd: `Android_35_Arm64_V8a` are met.
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_new_posture_requested(int) ((null):0, (null))
+
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_dismiss_posture_selection_dialog() ((null):0, (null))
+
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_new_resizable_requested(PresetEmulatorSizeType) ((null):0, (null))
+
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_dismiss_resizable_dialog() ((null):0, (null))
+
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_sleep_timer_done() ((null):0, (null))
+
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_unfold_timer_done() ((null):0, (null))
+
+INFO         | Storing crashdata in: /tmp/android-rajaniapple/emu-crash-35.3.11.db, detection is enabled for process: 32380
+library_mode host gpu mode host
+INFO         | Initializing hardware OpenGLES emulation support
+I0227 03:49:22.958600 7bd3840 opengles.cpp:285] android_startOpenglesRenderer: gpu info
+I0227 03:49:22.958622 7bd3840 opengles.cpp:286] 
+INFO         | HealthMonitor disabled.
+INFO         | initIcdPaths: ICD set to 'swiftshader', using Swiftshader ICD
+INFO         | Setting ICD filenames for the loader = /Users/rajaniapple/Library/Android/sdk/emulator/qemu/darwin-aarch64/lib64/vulkan/vk_swiftshader_icd.json:/Users/rajaniapple/Library/Android/sdk/emulator/lib64/vulkan/vk_swiftshader_icd.json
+INFO         | SharedLibrary::open for [/Users/rajaniapple/Library/Android/sdk/emulator/qemu/darwin-aarch64/lib64/vulkan/libvulkan.dylib]
+
+INFO         | SharedLibrary::open for [/Users/rajaniapple/Library/Android/sdk/emulator/qemu/darwin-aarch64/lib64/vulkan/libvulkan.dylib]: not found in map, open for the first time
+
+INFO         | SharedLibrary::open for [/Users/rajaniapple/Library/Android/sdk/emulator/qemu/darwin-aarch64/lib64/vulkan/libvulkan.dylib] (posix): begin
+
+INFO         | SharedLibrary::open for [/Users/rajaniapple/Library/Android/sdk/emulator/qemu/darwin-aarch64/lib64/vulkan/libvulkan.dylib] (posix,darwin): call dlopen
+
+INFO         | SharedLibrary::open for [/Users/rajaniapple/Library/Android/sdk/emulator/qemu/darwin-aarch64/lib64/vulkan/libvulkan.dylib] (posix,darwin): failed, try again with [/Users/rajaniapple/Library/Android/sdk/emulator/qemu/darwin-aarch64/lib64/vulkan/libvulkan.dylib]
+
+INFO         | SharedLibrary::open for [/Users/rajaniapple/Library/Android/sdk/emulator/qemu/darwin-aarch64/lib64/vulkan/libvulkan.dylib] failed (posix). dlerror: []
+
+INFO         | SharedLibrary::open for [/Users/rajaniapple/Library/Android/sdk/emulator/lib64/vulkan/libvulkan.dylib]
+
+INFO         | SharedLibrary::open for [/Users/rajaniapple/Library/Android/sdk/emulator/lib64/vulkan/libvulkan.dylib]: not found in map, open for the first time
+
+INFO         | SharedLibrary::open for [/Users/rajaniapple/Library/Android/sdk/emulator/lib64/vulkan/libvulkan.dylib] (posix): begin
+
+INFO         | SharedLibrary::open for [/Users/rajaniapple/Library/Android/sdk/emulator/lib64/vulkan/libvulkan.dylib] (posix,darwin): call dlopen
+
+INFO         | Added library: /Users/rajaniapple/Library/Android/sdk/emulator/lib64/vulkan/libvulkan.dylib
+INFO         | Selecting Vulkan device: SwiftShader Device (LLVM 10.0.0), Version: 1.2.0
+INFO         | Supports id properties, got a vulkan device UUID
+INFO         | SharedLibrary::open for [/System/Library/Frameworks/OpenGL.framework/OpenGL]: not found in map, open for the first time
+
+INFO         | SharedLibrary::open for [/System/Library/Frameworks/OpenGL.framework/OpenGL] (posix): begin
+
+INFO         | SharedLibrary::open for [/System/Library/Frameworks/OpenGL.framework/OpenGL] (posix,darwin): call dlopen
+
+INFO         | SharedLibrary::open for [libshadertranslator.dylib]: not found in map, open for the first time
+
+INFO         | SharedLibrary::open for [libshadertranslator.dylib] (posix): begin
+
+INFO         | SharedLibrary::open for [libshadertranslator.dylib] (posix,darwin): call dlopen
+
+INFO         | Initializing VkEmulation features:
+INFO         |     glInteropSupported: false
+INFO         |     useDeferredCommands: true
+INFO         |     createResourceWithRequirements: true
+INFO         |     useVulkanComposition: false
+INFO         |     useVulkanNativeSwapchain: false
+INFO         |     enable guestRenderDoc: false
+INFO         |     ASTC LDR emulation mode: 2
+INFO         |     enable ETC2 emulation: true
+INFO         |     enable Ycbcr emulation: false
+INFO         |     guestVulkanOnly: false
+INFO         |     useDedicatedAllocations: false
+INFO         | Graphics Adapter Vendor Google (Apple)
+INFO         | Graphics Adapter Android Emulator OpenGL ES Translator (Apple M1 Pro)
+INFO         | Graphics API Version OpenGL ES 3.0 (4.1 Metal - 89.3)
+INFO         | Graphics API Extensions GL_OES_EGL_sync GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_depth24 GL_OES_depth32 GL_OES_element_index_uint GL_OES_texture_float GL_OES_texture_float_linear GL_OES_compressed_paletted_texture GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth_texture GL_OES_texture_npot GL_OES_rgb8_rgba8 GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_texture_format_BGRA8888 GL_APPLE_texture_format_BGRA8888 
+INFO         | Graphics Device Extensions N/A
+INFO         | Sending adb public key [QAAAAFlHlV4Xb/+9hojNK8MvFmWCwn+m9EyO8uDLUVO4QVwlyXJmHbemdB/ZDV+nxkyGJGnYTDNTnKtaNt9e+fwR/+CdZpd5BfWdy13CYQEe2eOqM5GdVkuQZoYOzXHC1AjmSdLE/fP80cVAg5LUhIDexbbuASWH2Al6orx9PGfLi5h1ejrLLYFy2xM4E/ufZ6ZnCu09S10U3fo3TFKiLuBUDAwKNORA4ksI6wkXLpwaXUScuuLPbHckW5ohQt/KZyNSBh2tBI5cI3asfQucysJOtrfELQ452Ay5Dt88uapKb3U7FmTBwx+5V1ZEBCxXGTMcTkqT671vJk8u/xUnsv1AQp4e4iTgoXESQfHoxUBsUBO2oKaiILrJ+g2O/KGfU4C9e5Dx0RxelrcOtRRIdS1O29q0ZD3nrHo0LV1tFEXfYDRwfxYKY8t1vghKPAg5P/5yIRD2Oct4SsAJxojT1eR/kCMWblhwvqtKCUQuXYPTNrjL5q++2D4HIWnHmRwlMz0zmiR3ic8TGcBspc1sVDyoQbfLCn4zyyHd8emWE5TldCrOG8LGPq0UDr9WIZ413jQ7ffZ+PWX6AtHdt7Zt6qlpSdQ5QBqBTtJs607U7z5mheolPQU7Wv8PpknLyxjz8i+mnBdP59JIIZHtjWsH4U5j/eXIo2YHoNvtae7Yc0X3KL42ka4uuAEAAQA= rajaniapple@unknown]
+INFO         | Monitoring duration of emulator setup.
+WARNING      | The emulator now requires a signed jwt token for gRPC access! Use the -grpc flag if you really want an open unprotected grpc port
+INFO         | Using security allow list from: /Users/rajaniapple/Library/Android/sdk/emulator/lib/emulator_access.json
+WARNING      | *** Basic token auth should only be used by android-studio ***
+INFO         | The active JSON Web Key Sets can be found here: /Users/rajaniapple/Library/Caches/TemporaryItems/avd/running/32380/jwks/12ffc430-cd64-44fb-80b3-67a82e62518a/active.jwk
+INFO         | Scanning /Users/rajaniapple/Library/Caches/TemporaryItems/avd/running/32380/jwks/12ffc430-cd64-44fb-80b3-67a82e62518a for jwk keys.
+INFO         | Started GRPC server at 127.0.0.1:8554, security: Local, auth: +token
+INFO         | Advertising in: /Users/rajaniapple/Library/Caches/TemporaryItems/avd/running/pid_32380.ini
+INFO         | Setting display: 0 configuration to: 320x640, dpi: 160x160 
+INFO         | setDisplayActiveConfig 0
+2025-02-27 03:49:23.321 qemu-system-aarch64[32380:226027] +[IMKClient subclass]: chose IMKClient_Modern
+2025-02-27 03:49:23.321 qemu-system-aarch64[32380:226027] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+##############################################################################
+##                        WARNING - ACTION REQUIRED                         ##
+##  Consider using the '-metrics-collection' flag to help improve the       ##
+##  emulator by sending anonymized usage data. Or use the '-no-metrics'     ##
+##  flag to bypass this warning and turn off the metrics collection.        ##
+##  In a future release this warning will turn into a one-time blocking     ##
+##  prompt to ask for explicit user input regarding metrics collection.     ##
+##                                                                          ##
+##  Please see '-help-metrics-collection' for more details. You can use     ##
+##  '-metrics-to-file' or '-metrics-to-console' flags to see what type of   ##
+##  data is being collected by emulator as part of usage statistics.        ##
+##############################################################################
+INFO         | Loading snapshot 'default_boot'...
+WARNING      | Device 'encrypt' does not have the requested snapshot 'default_boot'
+
+WARNING      | Failed to load snapshot 'default_boot'
+USER_WARNING | The saved emulator state could not be loaded, performing a cold boot.
+WARNING      | Failed to process .ini file /Users/rajaniapple/.android/emu-update-last-check.ini for reading.
+INFO         | Activated packet streamer for bluetooth emulation
+WARNING      | Failed to process .ini file /Users/rajaniapple/.android/emu-update-last-check.ini for reading.
+INFO         | Boot completed in 15818 ms
+INFO         | Increasing screen off timeout, logcat buffer size to 2M.
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_rgbcSensorValueWidget_valueChanged() ((null):0, (null))
+
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_posture_valueChanged(int) ((null):0, (null))
+
+INFO         | Wait for emulator (pid 32380) 20 seconds to shutdown gracefully before kill;you can set environment variable ANDROID_EMULATOR_WAIT_TIME_BEFORE_KILL(in seconds) to change the default value (20 seconds)
+
+INFO         | Saving with gfxstream=1
+rajaniapple@Rajanis-MacBook-Pro ~ % 
