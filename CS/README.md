@@ -1,7 +1,5 @@
-Hybrid
-------
-
-- Flutter
+C#
+--
 
 - Blazor
 
@@ -9,18 +7,8 @@ Hybrid
 
 - .NET Aspire
 
-- Android
-
-- iOS
-
 Credits
 -------
-[![image](
-Credits/flutter.dev.svg)](https://flutter.dev/)  
-[![image](
-Credits/dart.dev.svg)](https://dart.dev/)  
-[![image](
-Credits/opensource.google.svg)](https://opensource.google/)  
 [![image](
 Credits/CS.NET-dotnet.microsoft.com.svg)](https://dotnet.microsoft.com/)  
 [![image](
@@ -44,12 +32,61 @@ Credits/developer.android.com.svg)](https://developer.android.com/)
 [![image](
 Credits/android.com.svg)](https://android.com/)  
 [![image](
-Credits/kotlinlang.org.svg)](https://kotlinlang.org/)  
+Credits/openjdk.org.svg)](https://openjdk.org/)  
+[![image](
+Credits/Java-oracle.com.svg)](https://oracle.com/java/)  
+[![image](
+Credits/OpenJDK-microsoft.com.svg)](https://microsoft.com/openjdk/)  
 [![image](
 Credits/swift.org.svg)](https://swift.org/)  
+[![image](
+Credits/Xcode-developer.apple.com.svg)](https://developer.apple.com/xcode/)  
 [![image](
 Credits/developer.apple.com.svg)](https://developer.apple.com/)  
 [![image](
 Credits/apple.com.svg)](https://apple.com/)  
 [![image](
-Credits/opensource.apple.com.svg)](https://opensource.apple.com/)
+Credits/opensource.apple.com.svg)](https://opensource.apple.com/)  
+[![image](
+Credits/azure.microsoft.com.svg)](https://azure.microsoft.com/)  
+[![image](
+Credits/nodejs.org.svg)](https://nodejs.org/)  
+[![image](
+Credits/npmjs.com.svg)](https://npmjs.com/)  
+[![image](
+Credits/expressjs.com.svg)](https://expressjs.com/)  
+[![image](
+Credits/python.org.svg)](https://python.org/)  
+[![image](
+Credits/pypi.org.svg)](https://pypi.org/)  
+[![image](
+Credits/flask.palletsprojects.com.svg)](https://flask.palletsprojects.com/)<!--[![image](
+Credits/palletsprojects.com.svg)](https://palletsprojects.com/)-->  
+[![image](
+Credits/docker.com.svg)](https://docker.com/)  
+[![image](
+Credits/hub.docker.com.svg)](https://hub.docker.com/)  
+[![image](
+Credits/podman.io.svg)](https://podman.io/)  
+[![image](
+Credits/opencontainers.org.svg)](https://opencontainers.org/)  
+[![image](
+Credits/dapr.io.svg)](https://dapr.io/)  
+[![image](
+Credits/opentelemetry.io.svg)](https://opentelemetry.io/)  
+[![image](
+Credits/openssl.org.svg)](https://openssl.org/)  
+[![image](
+Credits/openssl-foundation.org.svg)](https://openssl-foundation.org/)  
+[![image](
+Credits/CS.NET-learn.microsoft.com.svg)](https://learn.microsoft.com/dotnet/)  
+[![image](
+Credits/CS-learn.microsoft.com.svg)](https://learn.microsoft.com/dotnet/csharp/)<!--[![image](
+Credits/CS.NETlearn.microsoft.com.svg)](https://learn.microsoft.com/dotnet/csharp/)-->  
+[![image](
+Credits/Blazor-learn.microsoft.com.svg)](https://learn.microsoft.com/aspnet/core/blazor/)  
+[![image](
+Credits/CS.NET-MAUI-learn.microsoft.com.svg)](https://learn.microsoft.com/dotnet/maui/)  
+[![image](
+Credits/CS.NET-Aspire-learn.microsoft.com.svg)](https://learn.microsoft.com/dotnet/aspire/)<!--[![image](
+Credits/learn.microsoft.com.svg)](https://learn.microsoft.com/)-->
