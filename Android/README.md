@@ -20,6 +20,8 @@ Credits/openjdk.org.svg)](https://openjdk.org/)
 [![image](
 Credits/Java-oracle.com.svg)](https://oracle.com/java/)  
 [![image](
+Credits/toml.io.svg)](https://toml.io/)  
+[![image](
 Credits/gradle.org.svg)](https://gradle.org/)  
 [![image](
 Credits/gradle.com.svg)](https://gradle.com/)  
