@@ -88,5 +88,7 @@ Credits/Blazor-learn.microsoft.com.svg)](https://learn.microsoft.com/aspnet/core
 [![image](
 Credits/CS.NET-MAUI-learn.microsoft.com.svg)](https://learn.microsoft.com/dotnet/maui/)  
 [![image](
+Credits/XAML-learn.microsoft.com.svg)](https://learn.microsoft.com/dotnet/maui/xaml/)  
+[![image](
 Credits/CS.NET-Aspire-learn.microsoft.com.svg)](https://learn.microsoft.com/dotnet/aspire/)<!--[![image](
 Credits/learn.microsoft.com.svg)](https://learn.microsoft.com/)-->
