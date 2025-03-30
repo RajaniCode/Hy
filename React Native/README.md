@@ -1,1 +1,55 @@
+React Native
+------------
 
+- React Native
+
+Credits
+-------
+[![image](
+Credits/reactnative.dev.svg)](https://reactnative.dev/)  
+[![image](
+Credits/react.dev.svg)](https://react.dev/)  
+[![image](
+Credits/nodejs.org.svg)](https://nodejs.org/)  
+[![image](
+Credits/npmjs.com.svg)](https://npmjs.com/)
+[![image](
+Credits/opensource.fb.com.svg)](https://opensource.fb.com/)  
+[![image](
+Credits/Watchman-facebook.github.svg)](https://facebook.github.io/watchman/)  
+[![image](
+Credits/developer.android.com.svg)](https://developer.android.com/)  
+[![image](
+Credits/Android-Studio-developer.android.com.svg)](https://developer.android.com/studio/)  
+[![image](
+Credits/android.com.svg)](https://android.com/)  
+[![image](
+Credits/opensource.google.svg)](https://opensource.google/)  
+[![image](
+Credits/kotlinlang.org.svg)](https://kotlinlang.org/)  
+[![image](
+Credits/groovy-lang.org.svg)](https://groovy-lang.org/)  
+[![image](
+Credits/openjdk.org.svg)](https://openjdk.org/)  
+[![image](
+Credits/Java-oracle.com.svg)](https://oracle.com/java/)  
+[![image](
+Credits/swift.org.svg)](https://swift.org/)  
+[![image](
+Credits/Xcode-developer.apple.com.svg)](https://developer.apple.com/xcode/)  
+[![image](
+Credits/developer.apple.com.svg)](https://developer.apple.com/)  
+[![image](
+Credits/apple.com.svg)](https://apple.com/)  
+[![image](
+Credits/opensource.apple.com.svg)](https://opensource.apple.com/)  
+[![image](
+Credits/cocoapods.org.svg)](https://cocoapods.org/) 
+ [![image](
+Credits/rubygems.org.svg)](https://rubygems.org/)  
+[![image](
+Credits/gradle.org.svg)](https://gradle.org/)  
+[![image](
+Credits/gradle.com.svg)](https://gradle.com/)  
+[![image](
+Credits/plugins.gradle.org.svg)](https://plugins.gradle.org/)
