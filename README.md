@@ -9,6 +9,8 @@ Hybrid
 
 - .NET Aspire
 
+- React Native
+
 - Android
 
 - iOS
@@ -39,6 +41,10 @@ Credits/developer.microsoft.com.svg)](https://developer.microsoft.com/)
 Credits/microsoft.com.svg)](https://microsoft.com/)  
 [![image](
 Credits/opensource.microsoft.com.svg)](https://opensource.microsoft.com/)  
+[![image](
+Credits/reactnative.dev.svg)](https://reactnative.dev/)  
+[![image](
+Credits/opensource.fb.com.svg)](https://opensource.fb.com/)  
 [![image](
 Credits/developer.android.com.svg)](https://developer.android.com/)  
 [![image](
