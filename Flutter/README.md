@@ -12,6 +12,8 @@ Credits/flutter.dev.svg)](https://flutter.dev/)
 [![image](
 Credits/dart.dev.svg)](https://dart.dev/)  
 [![image](
+Credits/dartpad.dev.svg)](https://dartpad.dev/)  
+[![image](
 Credits/pub.dev.svg)](https://pub.dev/)  
 [![image](
 Credits/developer.android.com.svg)](https://developer.android.com/)  
@@ -21,6 +23,8 @@ Credits/android.com.svg)](https://android.com/)
 Credits/opensource.google.svg)](https://opensource.google/)  
 [![image](
 Credits/kotlinlang.org.svg)](https://kotlinlang.org/)  
+[![image](
+Credits/groovy-lang.org.svg)](https://groovy-lang.org/)  
 [![image](
 Credits/openjdk.org.svg)](https://openjdk.org/)  
 [![image](
@@ -44,11 +48,15 @@ Credits/Material-Components-material.io.svg)](https://m3.material.io/components/
 [![image](
 Credits/cocoapods.org.svg)](https://cocoapods.org/)  
 [![image](
+Credits/rubygems.org.svg)](https://rubygems.org/)  
+[![image](
 Credits/toml.io.svg)](https://toml.io/)  
 [![image](
 Credits/gradle.org.svg)](https://gradle.org/)  
 [![image](
 Credits/gradle.com.svg)](https://gradle.com/)  
+[![image](
+Credits/plugins.gradle.org.svg)](https://plugins.gradle.org/)  
 [![image](
 Credits/docs.flutter.dev.svg)](https://docs.flutter.dev/)  
 [![image](
