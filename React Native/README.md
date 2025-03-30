@@ -12,7 +12,7 @@ Credits/react.dev.svg)](https://react.dev/)
 [![image](
 Credits/nodejs.org.svg)](https://nodejs.org/)  
 [![image](
-Credits/npmjs.com.svg)](https://npmjs.com/)
+Credits/npmjs.com.svg)](https://npmjs.com/)  
 [![image](
 Credits/opensource.fb.com.svg)](https://opensource.fb.com/)  
 [![image](
@@ -44,7 +44,7 @@ Credits/apple.com.svg)](https://apple.com/)
 [![image](
 Credits/opensource.apple.com.svg)](https://opensource.apple.com/)  
 [![image](
-Credits/cocoapods.org.svg)](https://cocoapods.org/) 
+Credits/cocoapods.org.svg)](https://cocoapods.org/)  
  [![image](
 Credits/rubygems.org.svg)](https://rubygems.org/)  
 [![image](
