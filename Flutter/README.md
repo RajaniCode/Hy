@@ -30,8 +30,6 @@ Credits/openjdk.org.svg)](https://openjdk.org/)
 [![image](
 Credits/Java-oracle.com.svg)](https://oracle.com/java/)  
 [![image](
-Credits/swift.org.svg)](https://swift.org/)  
-[![image](
 Credits/Xcode-developer.apple.com.svg)](https://developer.apple.com/xcode/)  
 [![image](
 Credits/developer.apple.com.svg)](https://developer.apple.com/)  
