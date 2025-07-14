@@ -30,4 +30,4 @@ Credits/gradle.org.svg)](https://gradle.org/)
 [![image](
 Credits/gradle.com.svg)](https://gradle.com/)  
 [![image](
-Credits/plugins.gradle.org.svg)](https://plugins.gradle.org/)ß
+Credits/plugins.gradle.org.svg)](https://plugins.gradle.org/)
