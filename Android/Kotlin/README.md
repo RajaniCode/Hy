@@ -6,6 +6,8 @@ Kotlin
 Credits
 -------
 [![image](
+Credits/kotlinlang.org.svg)](https://kotlinlang.org/)  
+[![image](
 Credits/developer.android.com.svg)](https://developer.android.com/)  
 [![image](
 Credits/Android-Studio-developer.android.com.svg)](https://developer.android.com/studio/)  
@@ -13,8 +15,6 @@ Credits/Android-Studio-developer.android.com.svg)](https://developer.android.com
 Credits/android.com.svg)](https://android.com/)  
 [![image](
 Credits/opensource.google.svg)](https://opensource.google/)  
-[![image](
-Credits/kotlinlang.org.svg)](https://kotlinlang.org/)  
 [![image](
 Credits/gradle.org.svg)](https://gradle.org/)  
 [![image](
