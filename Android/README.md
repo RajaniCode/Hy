@@ -30,6 +30,4 @@ Credits/gradle.org.svg)](https://gradle.org/)
 [![image](
 Credits/gradle.com.svg)](https://gradle.com/)  
 [![image](
-Credits/plugins.gradle.org.svg)](https://plugins.gradle.org/)  
-[![image](
-Credits/Kotlin-static-code-analysis-rules.sonarsource.com.svg)](https://rules.sonarsource.com/kotlin/)
+Credits/plugins.gradle.org.svg)](https://plugins.gradle.org/)ß
