@@ -12,10 +12,6 @@ Credits/flutter.dev.svg)](https://flutter.dev/)
 [![image](
 Credits/dart.dev.svg)](https://dart.dev/)  
 [![image](
-Credits/dartpad.dev.svg)](https://dartpad.dev/)  
-[![image](
-Credits/pub.dev.svg)](https://pub.dev/)  
-[![image](
 Credits/developer.android.com.svg)](https://developer.android.com/)  
 [![image](
 Credits/android.com.svg)](https://android.com/)  
@@ -58,6 +54,4 @@ Credits/plugins.gradle.org.svg)](https://plugins.gradle.org/)
 [![image](
 Credits/docs.flutter.dev.svg)](https://docs.flutter.dev/)  
 [![image](
-Credits/api.flutter.dev.svg)](https://api.flutter.dev/)  
-[![image](
-Credits/Dart-static-code-analysis-rules.sonarsource.com.svg)](https://rules.sonarsource.com/dart/)
+Credits/api.flutter.dev.svg)](https://api.flutter.dev/)
