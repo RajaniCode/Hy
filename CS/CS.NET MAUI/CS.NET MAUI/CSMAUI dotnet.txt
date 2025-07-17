@@ -1,0 +1,1227 @@
+###########################################################################################################################
+
+# C#.NET Multi-platform App UI
+
+###########################################################################################################################
+***************************************************************************************************************************
+% dotnet --version
+[
+% dotnet dev-certs https --clean
+% dotnet dev-certs https
+% dotnet dev-certs https --trust
+]
+[
+% sudo dotnet workload update
+% dotnet workload search
+% dotnet workload list
+% dotnet new list
+]
+[
+% sudo dotnet workload install maui
+% dotnet workload search maui
+% dotnet new list maui
+]
+***************************************************************************************************************************
+
+# Xcode
+
+***************************************************************************************************************************
+# Install the Xcode command line developer tools
+# https://developer.apple.com/xcode/
+% xcode-select --version
+
+% xcode-select --install
+[
+xcode-select: note: Command line tools are already installed. Use "Software Update" in System Settings or the softwareupdate command line interface to install updates
+]
+***************************************************************************************************************************
+
+# App
+
+***************************************************************************************************************************
+% dotnet new maui --output CSMAUI
+
+% cd CSMAUI
+
+% cat CSMAUI.csproj
+[
+...
+<TargetFrameworks>net9.0-android;net9.0-ios;net9.0-maccatalyst</TargetFrameworks>
+...
+]
+
+# Edit Text="Hello, World!"
+% nano MainPage.xaml
+[
+...
+    Text="Rajani, .NET MAUI!"
+...
+]
+% cat MainPage.xaml
+***************************************************************************************************************************
+
+# iOS 
+
+***************************************************************************************************************************
+% xcrun --version
+
+% xcrun simctl list
+[
+...
+    iPhone 16 Pro Max (954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7) (Shutdown) 
+...
+]
+
+% export PATH="/Applications/Xcode.app/Contents/Developer/usr/bin/":$PATH
+
+% simctl list
+[
+...
+    iPhone 16 Pro Max (954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7) (Shutdown) 
+...
+]
+
+% dotnet build --framework net9.0-ios
+
+[
+% dotnet build --target:Run --framework net9.0-ios
+]
+% dotnet build --target:Run --framework net9.0-ios -p:_DeviceName=:v2:udid=954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7
+
+# Close the iPhone 16 Pro Max Simulator
+
+[
+# Terminal New Window # iOS # Boot # iPhone 16 Pro Max (954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7) (Shutdown) 
+% xcrun simctl boot 954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7
+% xcrun simctl list  
+]
+***************************************************************************************************************************
+
+# Mac Catalyst 
+
+***************************************************************************************************************************
+% dotnet build --framework net9.0-maccatalyst
+
+% dotnet build --target:Run --framework net9.0-maccatalyst
+***************************************************************************************************************************
+
+# OpenJDK
+
+***************************************************************************************************************************
+[
+# Java 23
+# OpenJDK 23
+% export PATH="$HOME/Downloads/Software/OpenJDK/JDK23.0.2/jdk-23.0.2.jdk/Contents/Home/bin/":$PATH
+]
+
+# Java 17
+# OpenJDK 17
+% export PATH="$HOME/Downloads/Software/OpenJDK/JDK17.0.2/jdk-17.0.2.jdk/Contents/Home/bin/":$PATH
+# Or
+# Java 17
+# Microsoft Build of OpenJDK
+% export PATH="$HOME/Downloads/Software/OpenJDK/MicrosoftBuildofOpenJDK/jdk-17.0.14+7/Contents/Home/bin/":$PATH
+***************************************************************************************************************************
+
+# Android 
+
+***************************************************************************************************************************
+# Android # android-studio-2024.2.2.15-mac_arm.dmg
+
+# Ensure Java Runtime
+% java --version
+
+[
+% ls $HOME/Library/Android
+% ls $HOME/Library/Android/sdk
+% ls $HOME/Library/Android/sdk/emulator
+% ls $HOME/Library/Android/sdk/platform-tools
+]
+
+# Android Studio > More Action > SDK Manager > Languages & Frameworks > Android SDK > SDK Tools
+[
+Android SDK Command-line Tools (latest)
+Android Auto API Simulators
+Android Auto Desktop Head Unit Emulator
+]
+
+# Android SDK Command-line Tools (latest)
+[
+% ls $HOME/Library/Android/sdk/cmdline-tools
+% ls $HOME/Library/Android/sdk/cmdline-tools/latest
+% ls $HOME/Library/Android/sdk/cmdline-tools/latest/bin
+% ls $HOME/Library/Android/sdk/cmdline-tools/latest/bin/sdkmanager
+% ls $HOME/Library/Android/sdk/cmdline-tools/latest/bin/avdmanager
+]
+
+% export PATH="$HOME/Library/Android/sdk/cmdline-tools/latest/bin/":$PATH
+
+% sdkmanager --version
+
+% sdkmanager --list
+[
+Installed packages:
+  Path                                                       | Version    | Description                                                | Location                                                  
+  -------                                                    | -------    | -------                                                    | -------                                                   
+  build-tools;35.0.1                                         | 35.0.1     | Android SDK Build-Tools 35.0.1                             | build-tools/35.0.1                                        
+  cmdline-tools;latest                                       | 19.0.0 rc1 | Android SDK Command-line Tools (latest)                    | cmdline-tools/latest                                      
+  emulator                                                   | 35.3.12    | Android Emulator                                           | emulator                                                  
+  extras;google;auto                                         | 2.0        | Android Auto Desktop Head Unit Emulator                    | extras/google/auto                                        
+  extras;google;simulators                                   | 1          | Android Auto API Simulators                                | extras/google/simulators                                  
+  platform-tools                                             | 35.0.2     | Android SDK Platform-Tools                                 | platform-tools                                            
+  platforms;android-35                                       | 2          | Android SDK Platform 35                                    | platforms/android-35                                      
+  sources;android-35                                         | 1          | Sources for Android 35                                     | sources/android-35                                        
+  system-images;android-34-ext9;android-automotive;arm64-v8a | 4          | Android Automotive with Google APIs arm64-v8a System Image | system-images/android-34-ext9/android-automotive/arm64-v8a
+
+Available Packages:
+  Path                                                                            | Version           | Description                                                               
+...    
+  system-images;android-Baklava;google_apis;arm64-v8a                             | 4                 | Google APIs ARM 64 v8a System Image                                  
+...
+]
+
+% sdkmanager --install emulator
+
+[
+# Android Studio > More Actions > Virtual Device Manager
+]
+% sdkmanager --install "system-images;android-Baklava;google_apis;arm64-v8a"
+
+[
+% ls $HOME/Library/Android/sdk/system-images  
+% ls $HOME/Library/Android/sdk/system-images/android-Baklava
+% ls $HOME/Library/Android/sdk/system-images/android-Baklava/google_apis
+% ls $HOME/Library/Android/sdk/system-images/android-Baklava/google_apis/arm64-v8a
+]
+
+% avdmanager 
+
+[
+% avdmanager list
+% avdmanager list device
+% avdmanager list target
+]
+% avdmanager list avd
+
+% avdmanager create avd -n Android_Baklava_Google_APIs_ARM64_V8a -k "system-images;android-Baklava;google_apis;arm64-v8a"
+
+# hw.keyboard=no
+% nano $HOME/.android/avd/Android_Baklava_Google_APIs_ARM64_V8a.avd/config.ini
+[
+...
+hw.keyboard=yes
+...
+]
+% cat $HOME/.android/avd/Android_Baklava_Google_APIs_ARM64_V8a.avd/config.ini
+
+% export PATH="$HOME/Library/Android/sdk/emulator/":$PATH
+% emulator -version
+% emulator -list-avds
+% avdmanager list avd    
+
+# Terminal Window # Android # emulator
+% export PATH="$HOME/Library/Android/sdk/emulator/":$PATH
+% emulator -version
+% emulator -list-avds
+[
+% emulator @Android_Baklava_Google_APIs_ARM64_V8a -verbose
+]
+% emulator -avd Android_Baklava_Google_APIs_ARM64_V8a
+
+# Original Terminal Window
+[
+% dotnet build --framework net9.0-android
+% dotnet build --target:InstallAndroidDependencies --framework:net9.0-android -p:AndroidSdkDirectory="$HOME/Library/Android/sdk" -p:AcceptAndroidSDKLicenses=True
+]
+% dotnet build --target:Run --framework net9.0-android -p:_DeviceName=:Android_Baklava_Google_APIs_ARM64_V8a
+
+# Terminal Window # Android # emulator
+<CClose the Android Android_Baklava_Google_APIs_ARM64_V8a Emulator>
+# Or 
+<control + c>
+
+# Original Terminal Window
+% avdmanager list avd 
+% emulator -list-avds
+ 
+% avdmanager delete avd --name Android_Baklava_Google_APIs_ARM64_V8a
+
+% ls $HOME/.android
+% sudo rm -rf $HOME/.android
+% ls $HOME/.emulator_console_auth_token
+% sudo rm -rf $HOME/.emulator_console_auth_token
+***************************************************************************************************************************
+###########################################################################################################################
+
+
+###########################################################################################################################
+***************************************************************************************************************************
+
+# Android 
+
+***************************************************************************************************************************
+===========================================================================================================================
+# Ensure Java Runtime
+% java --version
+===========================================================================================================================
+% export PATH="$HOME/Library/Android/sdk/cmdline-tools/latest/bin/":$PATH
+% sdkmanager --list
+[=======================================] 100% Computing updates...  
+Installed packages:
+  Path                                                          | Version       | Description                             | Location                                                     
+  -------                                                       | -------       | -------                                 | -------                                                      
+  build-tools;34.0.0                                            | 34.0.0        | Android SDK Build-Tools 34              | build-tools/34.0.0                                           
+  build-tools;35.0.0                                            | 35.0.0        | Android SDK Build-Tools 35              | build-tools/35.0.0                                           
+  build-tools;35.0.1                                            | 35.0.1        | Android SDK Build-Tools 35.0.1          | build-tools/35.0.1                                           
+  cmake;3.22.1                                                  | 3.22.1        | CMake 3.22.1                            | cmake/3.22.1                                                 
+  cmdline-tools;12.0                                            | 12.0          | Android SDK Command-line Tools          | cmdline-tools/12.0                                           
+  cmdline-tools;latest                                          | 19.0.0 rc1    | Android SDK Command-line Tools (latest) | cmdline-tools/latest                                         
+  emulator                                                      | 35.3.12       | Android Emulator                        | emulator                                                     
+  ndk;26.3.11579264                                             | 26.3.11579264 | NDK (Side by side) 26.3.11579264        | ndk/26.3.11579264                                            
+  platform-tools                                                | 35.0.2        | Android SDK Platform-Tools              | platform-tools                                               
+  platforms;android-30                                          | 3             | Android SDK Platform 30                 | platforms/android-30                                         
+  platforms;android-33                                          | 3             | Android SDK Platform 33                 | platforms/android-33                                         
+  platforms;android-34                                          | 3             | Android SDK Platform 34                 | platforms/android-34                                         
+  platforms;android-35                                          | 2             | Android SDK Platform 35                 | platforms/android-35                                         
+  sources;android-35                                            | 1             | Sources for Android 35                  | sources/android-35                                           
+  system-images;android-35;google_apis;arm64-v8a                | 9             | Google APIs ARM 64 v8a System Image     | system-images/android-35/google_apis/arm64-v8a               
+  system-images;android-Baklava;google_apis_playstore;arm64-v8a | 4             | Google Play ARM 64 v8a System Image     | system-images/android-Baklava/google_apis_playstore/arm64-v8a
+
+Available Packages:
+  Path                                                                            | Version           | Description                                                               
+  -------                                                                         | -------           | -------                                                                   
+  add-ons;addon-google_apis-google-15                                             | 3                 | Google APIs                                                               
+  add-ons;addon-google_apis-google-16                                             | 4                 | Google APIs                                                               
+  add-ons;addon-google_apis-google-17                                             | 4                 | Google APIs                                                               
+  add-ons;addon-google_apis-google-18                                             | 4                 | Google APIs                                                               
+  add-ons;addon-google_apis-google-19                                             | 20                | Google APIs                                                               
+  add-ons;addon-google_apis-google-21                                             | 1                 | Google APIs                                                               
+  add-ons;addon-google_apis-google-22                                             | 1                 | Google APIs                                                               
+  add-ons;addon-google_apis-google-23                                             | 1                 | Google APIs                                                               
+  add-ons;addon-google_apis-google-24                                             | 1                 | Google APIs                                                               
+  build-tools;19.1.0                                                              | 19.1.0            | Android SDK Build-Tools 19.1                                              
+  build-tools;20.0.0                                                              | 20.0.0            | Android SDK Build-Tools 20                                                
+  build-tools;21.1.2                                                              | 21.1.2            | Android SDK Build-Tools 21.1.2                                            
+  build-tools;22.0.1                                                              | 22.0.1            | Android SDK Build-Tools 22.0.1                                            
+  build-tools;23.0.1                                                              | 23.0.1            | Android SDK Build-Tools 23.0.1                                            
+  build-tools;23.0.2                                                              | 23.0.2            | Android SDK Build-Tools 23.0.2                                            
+  build-tools;23.0.3                                                              | 23.0.3            | Android SDK Build-Tools 23.0.3                                            
+  build-tools;24.0.0                                                              | 24.0.0            | Android SDK Build-Tools 24                                                
+  build-tools;24.0.1                                                              | 24.0.1            | Android SDK Build-Tools 24.0.1                                            
+  build-tools;24.0.2                                                              | 24.0.2            | Android SDK Build-Tools 24.0.2                                            
+  build-tools;24.0.3                                                              | 24.0.3            | Android SDK Build-Tools 24.0.3                                            
+  build-tools;25.0.0                                                              | 25.0.0            | Android SDK Build-Tools 25                                                
+  build-tools;25.0.1                                                              | 25.0.1            | Android SDK Build-Tools 25.0.1                                            
+  build-tools;25.0.2                                                              | 25.0.2            | Android SDK Build-Tools 25.0.2                                            
+  build-tools;25.0.3                                                              | 25.0.3            | Android SDK Build-Tools 25.0.3                                            
+  build-tools;26.0.0                                                              | 26.0.0            | Android SDK Build-Tools 26                                                
+  build-tools;26.0.1                                                              | 26.0.1            | Android SDK Build-Tools 26.0.1                                            
+  build-tools;26.0.2                                                              | 26.0.2            | Android SDK Build-Tools 26.0.2                                            
+  build-tools;26.0.3                                                              | 26.0.3            | Android SDK Build-Tools 26.0.3                                            
+  build-tools;27.0.0                                                              | 27.0.0            | Android SDK Build-Tools 27                                                
+  build-tools;27.0.1                                                              | 27.0.1            | Android SDK Build-Tools 27.0.1                                            
+  build-tools;27.0.2                                                              | 27.0.2            | Android SDK Build-Tools 27.0.2                                            
+  build-tools;27.0.3                                                              | 27.0.3            | Android SDK Build-Tools 27.0.3                                            
+  build-tools;28.0.0                                                              | 28.0.0            | Android SDK Build-Tools 28                                                
+  build-tools;28.0.1                                                              | 28.0.1            | Android SDK Build-Tools 28.0.1                                            
+  build-tools;28.0.2                                                              | 28.0.2            | Android SDK Build-Tools 28.0.2                                            
+  build-tools;28.0.3                                                              | 28.0.3            | Android SDK Build-Tools 28.0.3                                            
+  build-tools;29.0.0                                                              | 29.0.0            | Android SDK Build-Tools 29                                                
+  build-tools;29.0.1                                                              | 29.0.1            | Android SDK Build-Tools 29.0.1                                            
+  build-tools;29.0.2                                                              | 29.0.2            | Android SDK Build-Tools 29.0.2                                            
+  build-tools;29.0.3                                                              | 29.0.3            | Android SDK Build-Tools 29.0.3                                            
+  build-tools;30.0.0                                                              | 30.0.0            | Android SDK Build-Tools 30                                                
+  build-tools;30.0.1                                                              | 30.0.1            | Android SDK Build-Tools 30.0.1                                            
+  build-tools;30.0.2                                                              | 30.0.2            | Android SDK Build-Tools 30.0.2                                            
+  build-tools;30.0.3                                                              | 30.0.3            | Android SDK Build-Tools 30.0.3                                            
+  build-tools;31.0.0                                                              | 31.0.0            | Android SDK Build-Tools 31                                                
+  build-tools;32.0.0                                                              | 32.0.0            | Android SDK Build-Tools 32                                                
+  build-tools;32.1.0-rc1                                                          | 32.1.0 rc1        | Android SDK Build-Tools 32.1-rc1                                          
+  build-tools;33.0.0                                                              | 33.0.0            | Android SDK Build-Tools 33                                                
+  build-tools;33.0.1                                                              | 33.0.1            | Android SDK Build-Tools 33.0.1                                            
+  build-tools;33.0.2                                                              | 33.0.2            | Android SDK Build-Tools 33.0.2                                            
+  build-tools;33.0.3                                                              | 33.0.3            | Android SDK Build-Tools 33.0.3                                            
+  build-tools;34.0.0                                                              | 34.0.0            | Android SDK Build-Tools 34                                                
+  build-tools;34.0.0-rc1                                                          | 34.0.0 rc1        | Android SDK Build-Tools 34-rc1                                            
+  build-tools;34.0.0-rc2                                                          | 34.0.0 rc2        | Android SDK Build-Tools 34-rc2                                            
+  build-tools;34.0.0-rc3                                                          | 34.0.0 rc3        | Android SDK Build-Tools 34-rc3                                            
+  build-tools;35.0.0                                                              | 35.0.0            | Android SDK Build-Tools 35                                                
+  build-tools;35.0.0-rc1                                                          | 35.0.0 rc1        | Android SDK Build-Tools 35-rc1                                            
+  build-tools;35.0.0-rc2                                                          | 35.0.0 rc2        | Android SDK Build-Tools 35-rc2                                            
+  build-tools;35.0.0-rc3                                                          | 35.0.0 rc3        | Android SDK Build-Tools 35-rc3                                            
+  build-tools;35.0.0-rc4                                                          | 35.0.0 rc4        | Android SDK Build-Tools 35-rc4                                            
+  build-tools;35.0.1                                                              | 35.0.1            | Android SDK Build-Tools 35.0.1                                            
+  build-tools;36.0.0-rc1                                                          | 36.0.0 rc1        | Android SDK Build-Tools 36-rc1                                            
+  build-tools;36.0.0-rc3                                                          | 36.0.0 rc3        | Android SDK Build-Tools 36-rc3                                            
+  build-tools;36.0.0-rc4                                                          | 36.0.0 rc4        | Android SDK Build-Tools 36-rc4                                            
+  build-tools;36.0.0-rc5                                                          | 36.0.0 rc5        | Android SDK Build-Tools 36-rc5                                            
+  cmake;3.10.2.4988404                                                            | 3.10.2            | CMake 3.10.2.4988404                                                      
+  cmake;3.18.1                                                                    | 3.18.1            | CMake 3.18.1                                                              
+  cmake;3.22.1                                                                    | 3.22.1            | CMake 3.22.1                                                              
+  cmake;3.30.3                                                                    | 3.30.3            | CMake 3.30.3                                                              
+  cmake;3.30.4                                                                    | 3.30.4            | CMake 3.30.4                                                              
+  cmake;3.30.5                                                                    | 3.30.5            | CMake 3.30.5                                                              
+  cmake;3.31.0                                                                    | 3.31.0            | CMake 3.31.0                                                              
+  cmake;3.31.1                                                                    | 3.31.1            | CMake 3.31.1                                                              
+  cmake;3.31.4                                                                    | 3.31.4            | CMake 3.31.4                                                              
+  cmake;3.31.5                                                                    | 3.31.5            | CMake 3.31.5                                                              
+  cmake;3.6.4111459                                                               | 3.6.4111459       | CMake 3.6.4111459                                                         
+  cmdline-tools;1.0                                                               | 1.0               | Android SDK Command-line Tools                                            
+  cmdline-tools;10.0                                                              | 10.0              | Android SDK Command-line Tools                                            
+  cmdline-tools;11.0                                                              | 11.0              | Android SDK Command-line Tools                                            
+  cmdline-tools;12.0                                                              | 12.0              | Android SDK Command-line Tools                                            
+  cmdline-tools;13.0                                                              | 13.0              | Android SDK Command-line Tools                                            
+  cmdline-tools;16.0                                                              | 16.0              | Android SDK Command-line Tools                                            
+  cmdline-tools;16.0-alpha01                                                      | 16.0.0 rc1        | Android SDK Command-line Tools                                            
+  cmdline-tools;17.0                                                              | 17.0              | Android SDK Command-line Tools                                            
+  cmdline-tools;19.0-alpha01                                                      | 19.0.0 rc1        | Android SDK Command-line Tools                                            
+  cmdline-tools;2.1                                                               | 2.1               | Android SDK Command-line Tools                                            
+  cmdline-tools;3.0                                                               | 3.0               | Android SDK Command-line Tools                                            
+  cmdline-tools;4.0                                                               | 4.0               | Android SDK Command-line Tools                                            
+  cmdline-tools;5.0                                                               | 5.0               | Android SDK Command-line Tools                                            
+  cmdline-tools;6.0                                                               | 6.0               | Android SDK Command-line Tools                                            
+  cmdline-tools;7.0                                                               | 7.0               | Android SDK Command-line Tools                                            
+  cmdline-tools;8.0                                                               | 8.0               | Android SDK Command-line Tools                                            
+  cmdline-tools;9.0                                                               | 9.0               | Android SDK Command-line Tools                                            
+  cmdline-tools;latest                                                            | 19.0.0 rc1        | Android SDK Command-line Tools (latest)                                   
+  emulator                                                                        | 35.3.12           | Android Emulator                                                          
+  extras;android;m2repository                                                     | 47.0.0            | Android Support Repository                                                
+  extras;google;auto                                                              | 2.0               | Android Auto Desktop Head Unit Emulator                                   
+  extras;google;google_play_services                                              | 49                | Google Play services                                                      
+  extras;google;instantapps                                                       | 1.9.0             | Google Play Instant Development SDK                                       
+  extras;google;m2repository                                                      | 58                | Google Repository                                                         
+  extras;google;market_apk_expansion                                              | 1                 | Google Play APK Expansion library                                         
+  extras;google;market_licensing                                                  | 1                 | Google Play Licensing Library                                             
+  extras;google;simulators                                                        | 1                 | Android Auto API Simulators                                               
+  extras;google;webdriver                                                         | 2                 | Google Web Driver                                                         
+  ndk-bundle                                                                      | 22.1.7171670      | NDK                                                                       
+  ndk;16.1.4479499                                                                | 16.1.4479499      | NDK (Side by side) 16.1.4479499                                           
+  ndk;17.2.4988734                                                                | 17.2.4988734      | NDK (Side by side) 17.2.4988734                                           
+  ndk;18.1.5063045                                                                | 18.1.5063045      | NDK (Side by side) 18.1.5063045                                           
+  ndk;19.2.5345600                                                                | 19.2.5345600      | NDK (Side by side) 19.2.5345600                                           
+  ndk;20.0.5594570                                                                | 20.0.5594570      | NDK (Side by side) 20.0.5594570                                           
+  ndk;20.1.5948944                                                                | 20.1.5948944      | NDK (Side by side) 20.1.5948944                                           
+  ndk;21.1.6352462                                                                | 21.1.6352462      | NDK (Side by side) 21.1.6352462                                           
+  ndk;21.2.6472646                                                                | 21.2.6472646      | NDK (Side by side) 21.2.6472646                                           
+  ndk;21.3.6528147                                                                | 21.3.6528147      | NDK (Side by side) 21.3.6528147                                           
+  ndk;21.4.7075529                                                                | 21.4.7075529      | NDK (Side by side) 21.4.7075529                                           
+  ndk;22.0.7026061                                                                | 22.0.7026061      | NDK (Side by side) 22.0.7026061                                           
+  ndk;22.1.7171670                                                                | 22.1.7171670      | NDK (Side by side) 22.1.7171670                                           
+  ndk;23.0.7599858                                                                | 23.0.7599858      | NDK (Side by side) 23.0.7599858                                           
+  ndk;23.1.7779620                                                                | 23.1.7779620      | NDK (Side by side) 23.1.7779620                                           
+  ndk;23.2.8568313                                                                | 23.2.8568313      | NDK (Side by side) 23.2.8568313                                           
+  ndk;24.0.8215888                                                                | 24.0.8215888      | NDK (Side by side) 24.0.8215888                                           
+  ndk;25.0.8775105                                                                | 25.0.8775105      | NDK (Side by side) 25.0.8775105                                           
+  ndk;25.1.8937393                                                                | 25.1.8937393      | NDK (Side by side) 25.1.8937393                                           
+  ndk;25.2.9519653                                                                | 25.2.9519653      | NDK (Side by side) 25.2.9519653                                           
+  ndk;26.0.10792818                                                               | 26.0.10792818     | NDK (Side by side) 26.0.10792818                                          
+  ndk;26.1.10909125                                                               | 26.1.10909125     | NDK (Side by side) 26.1.10909125                                          
+  ndk;26.2.11394342                                                               | 26.2.11394342     | NDK (Side by side) 26.2.11394342                                          
+  ndk;26.3.11579264                                                               | 26.3.11579264     | NDK (Side by side) 26.3.11579264                                          
+  ndk;27.0.11718014                                                               | 27.0.11718014 rc1 | NDK (Side by side) 27.0.11718014                                          
+  ndk;27.0.11902837                                                               | 27.0.11902837 rc2 | NDK (Side by side) 27.0.11902837                                          
+  ndk;27.0.12077973                                                               | 27.0.12077973     | NDK (Side by side) 27.0.12077973                                          
+  ndk;27.1.12297006                                                               | 27.1.12297006     | NDK (Side by side) 27.1.12297006                                          
+  ndk;27.2.12479018                                                               | 27.2.12479018     | NDK (Side by side) 27.2.12479018                                          
+  ndk;28.0.12433566                                                               | 28.0.12433566 rc1 | NDK (Side by side) 28.0.12433566                                          
+  ndk;28.0.12674087                                                               | 28.0.12674087 rc2 | NDK (Side by side) 28.0.12674087                                          
+  ndk;28.0.12916984                                                               | 28.0.12916984 rc3 | NDK (Side by side) 28.0.12916984                                          
+  ndk;28.0.13004108                                                               | 28.0.13004108     | NDK (Side by side) 28.0.13004108                                          
+  platform-tools                                                                  | 35.0.2            | Android SDK Platform-Tools                                                
+  platforms;android-10                                                            | 2                 | Android SDK Platform 10                                                   
+  platforms;android-11                                                            | 2                 | Android SDK Platform 11                                                   
+  platforms;android-12                                                            | 3                 | Android SDK Platform 12                                                   
+  platforms;android-13                                                            | 1                 | Android SDK Platform 13                                                   
+  platforms;android-14                                                            | 4                 | Android SDK Platform 14                                                   
+  platforms;android-15                                                            | 5                 | Android SDK Platform 15                                                   
+  platforms;android-16                                                            | 5                 | Android SDK Platform 16                                                   
+  platforms;android-17                                                            | 3                 | Android SDK Platform 17                                                   
+  platforms;android-18                                                            | 3                 | Android SDK Platform 18                                                   
+  platforms;android-19                                                            | 4                 | Android SDK Platform 19                                                   
+  platforms;android-20                                                            | 2                 | Android SDK Platform 20                                                   
+  platforms;android-21                                                            | 2                 | Android SDK Platform 21                                                   
+  platforms;android-22                                                            | 2                 | Android SDK Platform 22                                                   
+  platforms;android-23                                                            | 3                 | Android SDK Platform 23                                                   
+  platforms;android-24                                                            | 2                 | Android SDK Platform 24                                                   
+  platforms;android-25                                                            | 3                 | Android SDK Platform 25                                                   
+  platforms;android-26                                                            | 2                 | Android SDK Platform 26                                                   
+  platforms;android-27                                                            | 3                 | Android SDK Platform 27                                                   
+  platforms;android-28                                                            | 6                 | Android SDK Platform 28                                                   
+  platforms;android-29                                                            | 5                 | Android SDK Platform 29                                                   
+  platforms;android-30                                                            | 3                 | Android SDK Platform 30                                                   
+  platforms;android-31                                                            | 1                 | Android SDK Platform 31                                                   
+  platforms;android-32                                                            | 1                 | Android SDK Platform 32                                                   
+  platforms;android-33                                                            | 3                 | Android SDK Platform 33                                                   
+  platforms;android-33-ext4                                                       | 1                 | Android SDK Platform 33-ext4                                              
+  platforms;android-33-ext5                                                       | 1                 | Android SDK Platform 33-ext5                                              
+  platforms;android-34                                                            | 3                 | Android SDK Platform 34                                                   
+  platforms;android-34-ext10                                                      | 1                 | Android SDK Platform 34-ext10                                             
+  platforms;android-34-ext11                                                      | 1                 | Android SDK Platform 34-ext11                                             
+  platforms;android-34-ext12                                                      | 1                 | Android SDK Platform 34-ext12                                             
+  platforms;android-34-ext8                                                       | 1                 | Android SDK Platform 34-ext8                                              
+  platforms;android-35                                                            | 2                 | Android SDK Platform 35                                                   
+  platforms;android-35-ext14                                                      | 1                 | Android SDK Platform 35-ext14                                             
+  platforms;android-7                                                             | 3                 | Android SDK Platform 7                                                    
+  platforms;android-8                                                             | 3                 | Android SDK Platform 8                                                    
+  platforms;android-9                                                             | 2                 | Android SDK Platform 9                                                    
+  platforms;android-Baklava                                                       | 5                 | Android SDK Platform Baklava                                              
+  skiaparser;1                                                                    | 6                 | Layout Inspector image server for API 29-30                               
+  skiaparser;2                                                                    | 3                 | Layout Inspector image server for API S                                   
+  skiaparser;3                                                                    | 6                 | Layout Inspector image server for API 31-36                               
+  sources;android-15                                                              | 2                 | Sources for Android 15                                                    
+  sources;android-16                                                              | 2                 | Sources for Android 16                                                    
+  sources;android-17                                                              | 1                 | Sources for Android 17                                                    
+  sources;android-18                                                              | 1                 | Sources for Android 18                                                    
+  sources;android-19                                                              | 2                 | Sources for Android 19                                                    
+  sources;android-20                                                              | 1                 | Sources for Android 20                                                    
+  sources;android-21                                                              | 1                 | Sources for Android 21                                                    
+  sources;android-22                                                              | 1                 | Sources for Android 22                                                    
+  sources;android-23                                                              | 1                 | Sources for Android 23                                                    
+  sources;android-24                                                              | 1                 | Sources for Android 24                                                    
+  sources;android-25                                                              | 1                 | Sources for Android 25                                                    
+  sources;android-26                                                              | 1                 | Sources for Android 26                                                    
+  sources;android-27                                                              | 1                 | Sources for Android 27                                                    
+  sources;android-28                                                              | 1                 | Sources for Android 28                                                    
+  sources;android-29                                                              | 1                 | Sources for Android 29                                                    
+  sources;android-30                                                              | 1                 | Sources for Android 30                                                    
+  sources;android-31                                                              | 1                 | Sources for Android 31                                                    
+  sources;android-32                                                              | 1                 | Sources for Android 32                                                    
+  sources;android-33                                                              | 1                 | Sources for Android 33                                                    
+  sources;android-34                                                              | 2                 | Sources for Android 34                                                    
+  sources;android-35                                                              | 1                 | Sources for Android 35                                                    
+  system-images;android-10;default;armeabi-v7a                                    | 5                 | ARM EABI v7a System Image                                                 
+  system-images;android-10;default;x86                                            | 5                 | Intel x86 Atom System Image                                               
+  system-images;android-10;google_apis;armeabi-v7a                                | 6                 | Google APIs ARM EABI v7a System Image                                     
+  system-images;android-10;google_apis;x86                                        | 6                 | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-14;default;armeabi-v7a                                    | 2                 | ARM EABI v7a System Image                                                 
+  system-images;android-15;default;armeabi-v7a                                    | 5                 | ARM EABI v7a System Image                                                 
+  system-images;android-15;default;x86                                            | 7                 | Intel x86 Atom System Image                                               
+  system-images;android-15;google_apis;armeabi-v7a                                | 6                 | Google APIs ARM EABI v7a System Image                                     
+  system-images;android-15;google_apis;x86                                        | 7                 | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-16;default;armeabi-v7a                                    | 6                 | ARM EABI v7a System Image                                                 
+  system-images;android-16;default;mips                                           | 1                 | MIPS System Image                                                         
+  system-images;android-16;default;x86                                            | 7                 | Intel x86 Atom System Image                                               
+  system-images;android-16;google_apis;armeabi-v7a                                | 6                 | Google APIs ARM EABI v7a System Image                                     
+  system-images;android-16;google_apis;x86                                        | 7                 | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-17;default;armeabi-v7a                                    | 6                 | ARM EABI v7a System Image                                                 
+  system-images;android-17;default;mips                                           | 1                 | MIPS System Image                                                         
+  system-images;android-17;default;x86                                            | 7                 | Intel x86 Atom System Image                                               
+  system-images;android-17;google_apis;armeabi-v7a                                | 6                 | Google APIs ARM EABI v7a System Image                                     
+  system-images;android-17;google_apis;x86                                        | 7                 | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-18;default;armeabi-v7a                                    | 5                 | ARM EABI v7a System Image                                                 
+  system-images;android-18;default;x86                                            | 4                 | Intel x86 Atom System Image                                               
+  system-images;android-18;google_apis;armeabi-v7a                                | 6                 | Google APIs ARM EABI v7a System Image                                     
+  system-images;android-18;google_apis;x86                                        | 6                 | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-19;default;armeabi-v7a                                    | 5                 | ARM EABI v7a System Image                                                 
+  system-images;android-19;default;x86                                            | 6                 | Intel x86 Atom System Image                                               
+  system-images;android-19;google_apis;armeabi-v7a                                | 40                | Google APIs ARM EABI v7a System Image                                     
+  system-images;android-19;google_apis;x86                                        | 40                | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-21;android-tv;armeabi-v7a                                 | 3                 | Android TV ARM EABI v7a System Image                                      
+  system-images;android-21;android-tv;x86                                         | 3                 | Android TV Intel x86 Atom System Image                                    
+  system-images;android-21;default;arm64-v8a                                      | 4                 | ARM 64 v8a System Image                                                   
+  system-images;android-21;default;armeabi-v7a                                    | 4                 | ARM EABI v7a System Image                                                 
+  system-images;android-21;default;x86                                            | 5                 | Intel x86 Atom System Image                                               
+  system-images;android-21;default;x86_64                                         | 5                 | Intel x86_64 Atom System Image                                            
+  system-images;android-21;google_apis;arm64-v8a                                  | 32                | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-21;google_apis;armeabi-v7a                                | 32                | Google APIs ARM EABI v7a System Image                                     
+  system-images;android-21;google_apis;x86                                        | 32                | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-21;google_apis;x86_64                                     | 32                | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-22;android-tv;x86                                         | 3                 | Android TV Intel x86 Atom System Image                                    
+  system-images;android-22;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                                   
+  system-images;android-22;default;armeabi-v7a                                    | 2                 | ARM EABI v7a System Image                                                 
+  system-images;android-22;default;x86                                            | 6                 | Intel x86 Atom System Image                                               
+  system-images;android-22;default;x86_64                                         | 6                 | Intel x86_64 Atom System Image                                            
+  system-images;android-22;google_apis;arm64-v8a                                  | 26                | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-22;google_apis;armeabi-v7a                                | 26                | Google APIs ARM EABI v7a System Image                                     
+  system-images;android-22;google_apis;x86                                        | 26                | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-22;google_apis;x86_64                                     | 26                | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-23;android-tv;armeabi-v7a                                 | 12                | Android TV ARM EABI v7a System Image                                      
+  system-images;android-23;android-tv;x86                                         | 21                | Android TV Intel x86 Atom System Image                                    
+  system-images;android-23;default;arm64-v8a                                      | 7                 | ARM 64 v8a System Image                                                   
+  system-images;android-23;default;armeabi-v7a                                    | 6                 | ARM EABI v7a System Image                                                 
+  system-images;android-23;default;x86                                            | 10                | Intel x86 Atom System Image                                               
+  system-images;android-23;default;x86_64                                         | 10                | Intel x86_64 Atom System Image                                            
+  system-images;android-23;google_apis;arm64-v8a                                  | 33                | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-23;google_apis;armeabi-v7a                                | 33                | Google APIs ARM EABI v7a System Image                                     
+  system-images;android-23;google_apis;x86                                        | 33                | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-23;google_apis;x86_64                                     | 33                | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-24;android-tv;x86                                         | 22                | Android TV Intel x86 Atom System Image                                    
+  system-images;android-24;default;arm64-v8a                                      | 9                 | ARM 64 v8a System Image                                                   
+  system-images;android-24;default;armeabi-v7a                                    | 7                 | ARM EABI v7a System Image                                                 
+  system-images;android-24;default;x86                                            | 8                 | Intel x86 Atom System Image                                               
+  system-images;android-24;default;x86_64                                         | 8                 | Intel x86_64 Atom System Image                                            
+  system-images;android-24;google_apis;arm64-v8a                                  | 29                | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-24;google_apis;x86                                        | 27                | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-24;google_apis;x86_64                                     | 27                | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-24;google_apis_playstore;x86                              | 19                | Google Play Intel x86 Atom System Image                                   
+  system-images;android-25;android-tv;x86                                         | 16                | Android TV Intel x86 Atom System Image                                    
+  system-images;android-25;android-wear;armeabi-v7a                               | 3                 | Android Wear ARM EABI v7a System Image                                    
+  system-images;android-25;android-wear;x86                                       | 3                 | Android Wear Intel x86 Atom System Image                                  
+  system-images;android-25;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                                   
+  system-images;android-25;default;x86                                            | 1                 | Intel x86 Atom System Image                                               
+  system-images;android-25;default;x86_64                                         | 1                 | Intel x86_64 Atom System Image                                            
+  system-images;android-25;google_apis;arm64-v8a                                  | 20                | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-25;google_apis;armeabi-v7a                                | 18                | Google APIs ARM EABI v7a System Image                                     
+  system-images;android-25;google_apis;x86                                        | 18                | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-25;google_apis;x86_64                                     | 18                | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-25;google_apis_playstore;x86                              | 9                 | Google Play Intel x86 Atom System Image                                   
+  system-images;android-26;android-tv;x86                                         | 14                | Android TV Intel x86 Atom System Image                                    
+  system-images;android-26;android-wear;x86                                       | 4                 | Android Wear Intel x86 Atom System Image                                  
+  system-images;android-26;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                                   
+  system-images;android-26;default;x86                                            | 1                 | Intel x86 Atom System Image                                               
+  system-images;android-26;default;x86_64                                         | 1                 | Intel x86_64 Atom System Image                                            
+  system-images;android-26;google_apis;arm64-v8a                                  | 3                 | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-26;google_apis;x86                                        | 16                | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-26;google_apis;x86_64                                     | 16                | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-26;google_apis_playstore;x86                              | 7                 | Google Play Intel x86 Atom System Image                                   
+  system-images;android-27;android-tv;x86                                         | 9                 | Android TV Intel x86 Atom System Image                                    
+  system-images;android-27;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                                   
+  system-images;android-27;default;x86                                            | 1                 | Intel x86 Atom System Image                                               
+  system-images;android-27;default;x86_64                                         | 1                 | Intel x86_64 Atom System Image                                            
+  system-images;android-27;google_apis;arm64-v8a                                  | 3                 | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-27;google_apis;x86                                        | 11                | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-27;google_apis_playstore;x86                              | 3                 | Google Play Intel x86 Atom System Image                                   
+  system-images;android-28;android-tv;x86                                         | 10                | Android TV Intel x86 Atom System Image                                    
+  system-images;android-28;android-wear;x86                                       | 9                 | Wear OS Intel x86 Atom System Image                                       
+  system-images;android-28;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                                   
+  system-images;android-28;default;x86                                            | 4                 | Intel x86 Atom System Image                                               
+  system-images;android-28;default;x86_64                                         | 4                 | Intel x86_64 Atom System Image                                            
+  system-images;android-28;google_apis;arm64-v8a                                  | 2                 | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-28;google_apis;x86                                        | 12                | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-28;google_apis;x86_64                                     | 11                | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-28;google_apis_playstore;arm64-v8a                        | 2                 | Google ARM64-V8a Play ARM 64 v8a System Image                             
+  system-images;android-28;google_apis_playstore;x86                              | 9                 | Google Play Intel x86 Atom System Image                                   
+  system-images;android-28;google_apis_playstore;x86_64                           | 8                 | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-29;android-tv;x86                                         | 3                 | Android TV Intel x86 Atom System Image                                    
+  system-images;android-29;default;arm64-v8a                                      | 8                 | ARM 64 v8a System Image                                                   
+  system-images;android-29;default;x86                                            | 8                 | Intel x86 Atom System Image                                               
+  system-images;android-29;default;x86_64                                         | 8                 | Intel x86_64 Atom System Image                                            
+  system-images;android-29;google_apis;arm64-v8a                                  | 13                | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-29;google_apis;x86                                        | 12                | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-29;google_apis;x86_64                                     | 12                | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-29;google_apis_playstore;arm64-v8a                        | 9                 | Google Play ARM 64 v8a System Image                                       
+  system-images;android-29;google_apis_playstore;x86                              | 8                 | Google Play Intel x86 Atom System Image                                   
+  system-images;android-29;google_apis_playstore;x86_64                           | 8                 | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-30;android-tv;x86                                         | 4                 | Android TV Intel x86 Atom System Image                                    
+  system-images;android-30;android-wear-cn;arm64-v8a                              | 12                | China version of Wear OS 3 ARM 64 v8a System Image                        
+  system-images;android-30;android-wear-cn;x86                                    | 12                | China version of Wear OS 3 Intel x86 Atom System Image                    
+  system-images;android-30;android-wear;arm64-v8a                                 | 12                | Wear OS 3 ARM 64 v8a System Image                                         
+  system-images;android-30;android-wear;x86                                       | 12                | Wear OS 3 Intel x86 Atom System Image                                     
+  system-images;android-30;aosp_atd;arm64-v8a                                     | 2                 | AOSP ATD ARM 64 v8a System Image                                          
+  system-images;android-30;aosp_atd;x86                                           | 1                 | AOSP ATD Intel x86 Atom System Image                                      
+  system-images;android-30;aosp_atd;x86_64                                        | 2                 | AOSP ATD Intel x86_64 Atom System Image                                   
+  system-images;android-30;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                                   
+  system-images;android-30;default;x86_64                                         | 11                | Intel x86_64 Atom System Image                                            
+  system-images;android-30;google-tv;x86                                          | 4                 | Google TV Intel x86 Atom System Image                                     
+  system-images;android-30;google_apis;arm64-v8a                                  | 16                | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-30;google_apis;x86                                        | 16                | Google APIs Intel x86 Atom System Image                                   
+  system-images;android-30;google_apis;x86_64                                     | 16                | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-30;google_apis_playstore;arm64-v8a                        | 10                | Google Play ARM 64 v8a System Image                                       
+  system-images;android-30;google_apis_playstore;x86                              | 9                 | Google Play Intel x86 Atom System Image                                   
+  system-images;android-30;google_apis_playstore;x86_64                           | 10                | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-30;google_atd;arm64-v8a                                   | 2                 | Google APIs ATD ARM 64 v8a System Image                                   
+  system-images;android-30;google_atd;x86                                         | 1                 | Google APIs ATD Intel x86 Atom System Image                               
+  system-images;android-30;google_atd;x86_64                                      | 2                 | Google APIs ATD Intel x86_64 Atom System Image                            
+  system-images;android-31;android-tv;arm64-v8a                                   | 4                 | Android TV ARM 64 v8a System Image                                        
+  system-images;android-31;android-tv;x86                                         | 4                 | Android TV Intel x86 Atom System Image                                    
+  system-images;android-31;aosp_atd;arm64-v8a                                     | 1                 | AOSP ATD ARM 64 v8a System Image                                          
+  system-images;android-31;aosp_atd;x86_64                                        | 2                 | AOSP ATD Intel x86_64 Atom System Image                                   
+  system-images;android-31;default;arm64-v8a                                      | 4                 | ARM 64 v8a System Image                                                   
+  system-images;android-31;default;x86_64                                         | 5                 | Intel x86_64 Atom System Image                                            
+  system-images;android-31;google-tv;arm64-v8a                                    | 4                 | Google TV ARM 64 v8a System Image                                         
+  system-images;android-31;google-tv;x86                                          | 4                 | Google TV Intel x86 Atom System Image                                     
+  system-images;android-31;google_apis;arm64-v8a                                  | 11                | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-31;google_apis;x86_64                                     | 14                | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-31;google_apis_playstore;arm64-v8a                        | 9                 | Google Play ARM 64 v8a System Image                                       
+  system-images;android-31;google_apis_playstore;x86_64                           | 9                 | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-31;google_atd;arm64-v8a                                   | 1                 | Google APIs ATD ARM 64 v8a System Image                                   
+  system-images;android-31;google_atd;x86_64                                      | 2                 | Google APIs ATD Intel x86_64 Atom System Image                            
+  system-images;android-32;android-desktop;arm64-v8a                              | 5                 | Desktop ARM 64 v8a System Image                                           
+  system-images;android-32;android-desktop;x86_64                                 | 5                 | Desktop Intel x86_64 Atom System Image                                    
+  system-images;android-32;aosp_atd;arm64-v8a                                     | 1                 | AOSP ATD ARM 64 v8a System Image                                          
+  system-images;android-32;aosp_atd;x86_64                                        | 1                 | AOSP ATD Intel x86_64 Atom System Image                                   
+  system-images;android-32;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                                   
+  system-images;android-32;default;x86_64                                         | 2                 | Intel x86_64 Atom System Image                                            
+  system-images;android-32;google_apis;arm64-v8a                                  | 8                 | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-32;google_apis;x86_64                                     | 8                 | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-32;google_apis_playstore;arm64-v8a                        | 4                 | Google Play ARM 64 v8a System Image                                       
+  system-images;android-32;google_apis_playstore;x86_64                           | 4                 | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-32;google_atd;arm64-v8a                                   | 1                 | Google APIs ATD ARM 64 v8a System Image                                   
+  system-images;android-32;google_atd;x86_64                                      | 1                 | Google APIs ATD Intel x86_64 Atom System Image                            
+  system-images;android-33-ext4;google_apis_playstore;arm64-v8a                   | 1                 | Google Play ARM 64 v8a System Image                                       
+  system-images;android-33-ext4;google_apis_playstore;x86_64                      | 1                 | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-33-ext5;google_apis_playstore;arm64-v8a                   | 2                 | Google Play ARM 64 v8a System Image                                       
+  system-images;android-33-ext5;google_apis_playstore;x86_64                      | 2                 | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-33;android-automotive-distant-display-playstore;arm64-v8a | 1                 | Automotive Distant Display with Google Play arm64-v8a System Image        
+  system-images;android-33;android-automotive-distant-display-playstore;x86_64    | 1                 | Automotive Distant Display with Google Play x86_64 System Image           
+  system-images;android-33;android-automotive;arm64-v8a                           | 4                 | Android Automotive with Google APIs arm64-v8a System Image                
+  system-images;android-33;android-automotive;x86_64                              | 4                 | Android Automotive with Google APIs x86_64 System Image                   
+  system-images;android-33;android-desktop;arm64-v8a                              | 4                 | Desktop ARM 64 v8a System Image                                           
+  system-images;android-33;android-desktop;x86_64                                 | 4                 | Desktop Intel x86_64 Atom System Image                                    
+  system-images;android-33;android-tv;arm64-v8a                                   | 5                 | Android TV ARM 64 v8a System Image                                        
+  system-images;android-33;android-tv;x86                                         | 5                 | Android TV Intel x86 Atom System Image                                    
+  system-images;android-33;android-wear;arm64-v8a                                 | 4                 | Wear OS 4 ARM 64 v8a System Image                                         
+  system-images;android-33;android-wear;x86_64                                    | 4                 | Wear OS 4 Intel x86_64 Atom System Image                                  
+  system-images;android-33;aosp_atd;arm64-v8a                                     | 2                 | AOSP ATD ARM 64 v8a System Image                                          
+  system-images;android-33;aosp_atd;x86_64                                        | 2                 | AOSP ATD Intel x86_64 Atom System Image                                   
+  system-images;android-33;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                                   
+  system-images;android-33;default;x86_64                                         | 2                 | Intel x86_64 Atom System Image                                            
+  system-images;android-33;google-tv;arm64-v8a                                    | 5                 | Google TV ARM 64 v8a System Image                                         
+  system-images;android-33;google-tv;x86                                          | 5                 | Google TV Intel x86 Atom System Image                                     
+  system-images;android-33;google_apis;arm64-v8a                                  | 17                | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-33;google_apis;x86_64                                     | 17                | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-33;google_apis_playstore;arm64-v8a                        | 9                 | Google Play ARM 64 v8a System Image                                       
+  system-images;android-33;google_apis_playstore;x86_64                           | 9                 | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-33;google_atd;arm64-v8a                                   | 2                 | Google APIs ATD ARM 64 v8a System Image                                   
+  system-images;android-33;google_atd;x86_64                                      | 2                 | Google APIs ATD Intel x86_64 Atom System Image                            
+  system-images;android-34-ext10;google_apis_playstore;arm64-v8a                  | 2                 | Google Play ARM 64 v8a System Image                                       
+  system-images;android-34-ext10;google_apis_playstore;x86_64                     | 2                 | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-34-ext11;google_apis_playstore;arm64-v8a                  | 1                 | Google Play ARM 64 v8a System Image                                       
+  system-images;android-34-ext11;google_apis_playstore;x86_64                     | 1                 | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-34-ext12;google_apis_playstore;arm64-v8a                  | 1                 | Google Play ARM 64 v8a System Image                                       
+  system-images;android-34-ext12;google_apis_playstore;x86_64                     | 1                 | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-34-ext8;google_apis_playstore;arm64-v8a                   | 2                 | Google Play ARM 64 v8a System Image                                       
+  system-images;android-34-ext8;google_apis_playstore;x86_64                      | 2                 | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-34-ext9;android-automotive-playstore;arm64-v8a            | 3                 | Android Automotive with Google Play arm64-v8a System Image                
+  system-images;android-34-ext9;android-automotive-playstore;x86_64               | 3                 | Android Automotive with Google Play x86_64 System Image                   
+  system-images;android-34-ext9;android-automotive;arm64-v8a                      | 4                 | Android Automotive with Google APIs arm64-v8a System Image                
+  system-images;android-34-ext9;android-automotive;x86_64                         | 4                 | Android Automotive with Google APIs x86_64 System Image                   
+  system-images;android-34;android-desktop;arm64-v8a                              | 1                 | Desktop ARM 64 v8a System Image                                           
+  system-images;android-34;android-desktop;x86_64                                 | 1                 | Desktop Intel x86_64 Atom System Image                                    
+  system-images;android-34;android-tv;arm64-v8a                                   | 3                 | Android TV ARM 64 v8a System Image                                        
+  system-images;android-34;android-tv;x86                                         | 3                 | Android TV Intel x86 Atom System Image                                    
+  system-images;android-34;android-wear;arm64-v8a                                 | 1                 | Wear OS 5 ARM 64 v8a System Image                                         
+  system-images;android-34;android-wear;x86_64                                    | 1                 | Wear OS 5 Intel x86_64 Atom System Image                                  
+  system-images;android-34;aosp_atd;arm64-v8a                                     | 2                 | AOSP ATD ARM 64 v8a System Image                                          
+  system-images;android-34;aosp_atd;x86_64                                        | 2                 | AOSP ATD Intel x86_64 Atom System Image                                   
+  system-images;android-34;default;arm64-v8a                                      | 4                 | ARM 64 v8a System Image                                                   
+  system-images;android-34;default;x86_64                                         | 4                 | Intel x86_64 Atom System Image                                            
+  system-images;android-34;google-tv;arm64-v8a                                    | 3                 | Google TV ARM 64 v8a System Image                                         
+  system-images;android-34;google-tv;x86                                          | 3                 | Google TV Intel x86 Atom System Image                                     
+  system-images;android-34;google_apis;arm64-v8a                                  | 14                | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-34;google_apis;x86_64                                     | 14                | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-34;google_apis_playstore;arm64-v8a                        | 14                | Google Play ARM 64 v8a System Image                                       
+  system-images;android-34;google_apis_playstore;x86_64                           | 14                | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-34;google_atd;arm64-v8a                                   | 1                 | Google APIs ATD ARM 64 System Image                                       
+  system-images;android-34;google_atd;x86_64                                      | 1                 | Google APIs ATD Intel x86_64 Atom System Image                            
+  system-images;android-35-ext14;google_apis_playstore;arm64-v8a                  | 1                 | Google Play ARM 64 v8a System Image                                       
+  system-images;android-35-ext14;google_apis_playstore;x86_64                     | 1                 | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-35;aosp_atd;arm64-v8a                                     | 1                 | AOSP ATD ARM 64 System Image                                              
+  system-images;android-35;aosp_atd;x86_64                                        | 1                 | AOSP ATD Intel x86_64 Atom System Image                                   
+  system-images;android-35;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                                   
+  system-images;android-35;default;x86_64                                         | 2                 | Intel x86_64 Atom System Image                                            
+  system-images;android-35;google_apis;arm64-v8a                                  | 9                 | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-35;google_apis;x86_64                                     | 9                 | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-35;google_apis_playstore;arm64-v8a                        | 9                 | Google Play ARM 64 v8a System Image                                       
+  system-images;android-35;google_apis_playstore;x86_64                           | 9                 | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-35;google_apis_playstore_ps16k;arm64-v8a                  | 5                 | Pre-Release 16 KB Page Size Google Play ARM 64 v8a System Image           
+  system-images;android-35;google_apis_playstore_ps16k;x86_64                     | 5                 | Pre-Release 16 KB Page Size Google Play ARM Intel x86_64 Atom System Image
+  system-images;android-35;google_apis_ps16k;arm64-v8a                            | 5                 | Pre-Release 16 KB Page Size Google APIs ARM 64 v8a System Image           
+  system-images;android-35;google_apis_ps16k;x86_64                               | 5                 | Pre-Release 16 KB Page Size Google APIs Intel x86_64 Atom System Image    
+  system-images;android-35;google_atd;arm64-v8a                                   | 1                 | Google APIs ATD ARM 64 System Image                                       
+  system-images;android-35;google_atd;x86_64                                      | 1                 | Google APIs ATD Intel x86_64 Atom System Image                            
+  system-images;android-Baklava;google_apis;arm64-v8a                             | 4                 | Google APIs ARM 64 v8a System Image                                       
+  system-images;android-Baklava;google_apis;x86_64                                | 4                 | Google APIs Intel x86_64 Atom System Image                                
+  system-images;android-Baklava;google_apis_playstore;arm64-v8a                   | 4                 | Google Play ARM 64 v8a System Image                                       
+  system-images;android-Baklava;google_apis_playstore;x86_64                      | 4                 | Google Play Intel x86_64 Atom System Image                                
+  system-images;android-Baklava;google_apis_playstore_ps16k;arm64-v8a             | 4                 | Pre-Release 16 KB Page Size Google Play ARM 64 v8a System Image           
+  system-images;android-Baklava;google_apis_playstore_ps16k;x86_64                | 4                 | Pre-Release 16 KB Page Size Google Play ARM Intel x86_64 Atom System Image
+  system-images;android-Baklava;google_apis_ps16k;arm64-v8a                       | 4                 | Pre-Release 16 KB Page Size Google APIs ARM 64 v8a System Image           
+  system-images;android-Baklava;google_apis_ps16k;x86_64                          | 4                 | Pre-Release 16 KB Page Size Google APIs Intel x86_64 Atom System Image    
+===========================================================================================================================
+% export PATH="$HOME/Library/Android/sdk/cmdline-tools/latest/bin/":$PATH
+% avdmanager list
+Available Android Virtual Devices:
+Available devices definitions:
+id: 0 or "automotive_1024p_landscape"
+    Name: Automotive (1024p landscape)
+    OEM : Google
+    Tag : android-automotive-playstore
+---------
+id: 1 or "automotive_1080p_landscape"
+    Name: Automotive (1080p landscape)
+    OEM : Google
+    Tag : android-automotive
+---------
+id: 2 or "automotive_1408p_landscape_with_google_apis"
+    Name: Automotive (1408p landscape)
+    OEM : Google
+    Tag : android-automotive
+---------
+id: 3 or "automotive_1408p_landscape_with_play"
+    Name: Automotive (1408p landscape) with Google Play
+    OEM : Google
+    Tag : android-automotive
+---------
+id: 4 or "automotive_distant_display"
+    Name: Automotive Distant Display
+    OEM : Google
+    Tag : android-automotive-distantdisplay
+---------
+id: 5 or "automotive_distant_display_with_play"
+    Name: Automotive Distant Display with Google Play
+    OEM : Google
+    Tag : android-automotive-distantdisplay
+---------
+id: 6 or "automotive_large_portrait"
+    Name: Automotive Large Portrait
+    OEM : Google
+    Tag : android-automotive
+---------
+id: 7 or "automotive_portrait"
+    Name: Automotive Portrait
+    OEM : Google
+    Tag : android-automotive
+---------
+id: 8 or "automotive_ultrawide"
+    Name: Automotive Ultrawide
+    OEM : Google
+    Tag : android-automotive
+---------
+id: 9 or "Galaxy Nexus"
+    Name: Galaxy Nexus
+    OEM : Google
+---------
+id: 10 or "desktop_large"
+    Name: Large Desktop
+    OEM : Google
+    Tag : android-desktop
+---------
+id: 11 or "desktop_medium"
+    Name: Medium Desktop
+    OEM : Google
+    Tag : android-desktop
+---------
+id: 12 or "medium_phone"
+    Name: Medium Phone
+    OEM : Generic
+---------
+id: 13 or "medium_tablet"
+    Name: Medium Tablet
+    OEM : Generic
+---------
+id: 14 or "Nexus 10"
+    Name: Nexus 10
+    OEM : Google
+---------
+id: 15 or "Nexus 4"
+    Name: Nexus 4
+    OEM : Google
+---------
+id: 16 or "Nexus 5"
+    Name: Nexus 5
+    OEM : Google
+---------
+id: 17 or "Nexus 5X"
+    Name: Nexus 5X
+    OEM : Google
+---------
+id: 18 or "Nexus 6"
+    Name: Nexus 6
+    OEM : Google
+---------
+id: 19 or "Nexus 6P"
+    Name: Nexus 6P
+    OEM : Google
+---------
+id: 20 or "Nexus 7 2013"
+    Name: Nexus 7
+    OEM : Google
+---------
+id: 21 or "Nexus 7"
+    Name: Nexus 7 (2012)
+    OEM : Google
+---------
+id: 22 or "Nexus 9"
+    Name: Nexus 9
+    OEM : Google
+---------
+id: 23 or "Nexus One"
+    Name: Nexus One
+    OEM : Google
+---------
+id: 24 or "Nexus S"
+    Name: Nexus S
+    OEM : Google
+---------
+id: 25 or "pixel"
+    Name: Pixel
+    OEM : Google
+---------
+id: 26 or "pixel_2"
+    Name: Pixel 2
+    OEM : Google
+---------
+id: 27 or "pixel_2_xl"
+    Name: Pixel 2 XL
+    OEM : Google
+---------
+id: 28 or "pixel_3"
+    Name: Pixel 3
+    OEM : Google
+---------
+id: 29 or "pixel_3_xl"
+    Name: Pixel 3 XL
+    OEM : Google
+---------
+id: 30 or "pixel_3a"
+    Name: Pixel 3a
+    OEM : Google
+---------
+id: 31 or "pixel_3a_xl"
+    Name: Pixel 3a XL
+    OEM : Google
+---------
+id: 32 or "pixel_4"
+    Name: Pixel 4
+    OEM : Google
+---------
+id: 33 or "pixel_4_xl"
+    Name: Pixel 4 XL
+    OEM : Google
+---------
+id: 34 or "pixel_4a"
+    Name: Pixel 4a
+    OEM : Google
+---------
+id: 35 or "pixel_5"
+    Name: Pixel 5
+    OEM : Google
+---------
+id: 36 or "pixel_6"
+    Name: Pixel 6
+    OEM : Google
+---------
+id: 37 or "pixel_6_pro"
+    Name: Pixel 6 Pro
+    OEM : Google
+---------
+id: 38 or "pixel_6a"
+    Name: Pixel 6a
+    OEM : Google
+---------
+id: 39 or "pixel_7"
+    Name: Pixel 7
+    OEM : Google
+---------
+id: 40 or "pixel_7_pro"
+    Name: Pixel 7 Pro
+    OEM : Google
+---------
+id: 41 or "pixel_7a"
+    Name: Pixel 7a
+    OEM : Google
+---------
+id: 42 or "pixel_8"
+    Name: Pixel 8
+    OEM : Google
+---------
+id: 43 or "pixel_8_pro"
+    Name: Pixel 8 Pro
+    OEM : Google
+---------
+id: 44 or "pixel_8a"
+    Name: Pixel 8a
+    OEM : Google
+---------
+id: 45 or "pixel_9"
+    Name: Pixel 9
+    OEM : Google
+---------
+id: 46 or "pixel_9_pro"
+    Name: Pixel 9 Pro
+    OEM : Google
+---------
+id: 47 or "pixel_9_pro_fold"
+    Name: Pixel 9 Pro Fold
+    OEM : Google
+---------
+id: 48 or "pixel_9_pro_xl"
+    Name: Pixel 9 Pro XL
+    OEM : Google
+---------
+id: 49 or "pixel_c"
+    Name: Pixel C
+    OEM : Google
+---------
+id: 50 or "pixel_fold"
+    Name: Pixel Fold
+    OEM : Google
+---------
+id: 51 or "pixel_tablet"
+    Name: Pixel Tablet
+    OEM : Google
+---------
+id: 52 or "pixel_xl"
+    Name: Pixel XL
+    OEM : Google
+---------
+id: 53 or "resizable"
+    Name: Resizable (Experimental)
+    OEM : Generic
+---------
+id: 54 or "desktop_small"
+    Name: Small Desktop
+    OEM : Google
+    Tag : android-desktop
+---------
+id: 55 or "small_phone"
+    Name: Small Phone
+    OEM : Generic
+---------
+id: 56 or "tv_1080p"
+    Name: Television (1080p)
+    OEM : Google
+    Tag : android-tv
+---------
+id: 57 or "tv_4k"
+    Name: Television (4K)
+    OEM : Google
+    Tag : android-tv
+---------
+id: 58 or "tv_720p"
+    Name: Television (720p)
+    OEM : Google
+    Tag : android-tv
+---------
+id: 59 or "wearos_large_round"
+    Name: Wear OS Large Round
+    OEM : Google
+    Tag : android-wear
+---------
+id: 60 or "wearos_rect"
+    Name: Wear OS Rectangular
+    OEM : Google
+    Tag : android-wear
+---------
+id: 61 or "wearos_small_round"
+    Name: Wear OS Small Round
+    OEM : Google
+    Tag : android-wear
+---------
+id: 62 or "wearos_square"
+    Name: Wear OS Square
+    OEM : Google
+    Tag : android-wear
+---------
+id: 63 or "2.7in QVGA"
+    Name: 2.7" QVGA
+    OEM : Generic
+---------
+id: 64 or "2.7in QVGA slider"
+    Name: 2.7" QVGA slider
+    OEM : Generic
+---------
+id: 65 or "3.2in HVGA slider (ADP1)"
+    Name: 3.2" HVGA slider (ADP1)
+    OEM : Generic
+---------
+id: 66 or "3.2in QVGA (ADP2)"
+    Name: 3.2" QVGA (ADP2)
+    OEM : Generic
+---------
+id: 67 or "3.3in WQVGA"
+    Name: 3.3" WQVGA
+    OEM : Generic
+---------
+id: 68 or "3.4in WQVGA"
+    Name: 3.4" WQVGA
+    OEM : Generic
+---------
+id: 69 or "3.7 FWVGA slider"
+    Name: 3.7" FWVGA slider
+    OEM : Generic
+---------
+id: 70 or "3.7in WVGA (Nexus One)"
+    Name: 3.7" WVGA (Nexus One)
+    OEM : Generic
+---------
+id: 71 or "4in WVGA (Nexus S)"
+    Name: 4" WVGA (Nexus S)
+    OEM : Generic
+---------
+id: 72 or "4.65in 720p (Galaxy Nexus)"
+    Name: 4.65" 720p (Galaxy Nexus)
+    OEM : Generic
+---------
+id: 73 or "4.7in WXGA"
+    Name: 4.7" WXGA
+    OEM : Generic
+---------
+id: 74 or "5.1in WVGA"
+    Name: 5.1" WVGA
+    OEM : Generic
+---------
+id: 75 or "5.4in FWVGA"
+    Name: 5.4" FWVGA
+    OEM : Generic
+---------
+id: 76 or "6.7in Foldable"
+    Name: 6.7" Horizontal Fold-in
+    OEM : Generic
+---------
+id: 77 or "7in WSVGA (Tablet)"
+    Name: 7" WSVGA (Tablet)
+    OEM : Generic
+---------
+id: 78 or "7.4in Rollable"
+    Name: 7.4" Rollable
+    OEM : Generic
+---------
+id: 79 or "7.6in Foldable"
+    Name: 7.6" Fold-in with outer display
+    OEM : Generic
+---------
+id: 80 or "8in Foldable"
+    Name: 8" Fold-out
+    OEM : Generic
+---------
+id: 81 or "10.1in WXGA (Tablet)"
+    Name: 10.1" WXGA (Tablet)
+    OEM : Generic
+---------
+id: 82 or "13.5in Freeform"
+    Name: 13.5" Freeform
+    OEM : Generic
+Available Android targets:
+----------
+id: 1 or "android-35"
+     Name: Android API 35, extension level 13
+     Type: Platform
+     API level: 35
+     Revision: 2
+===========================================================================================================================
+***************************************************************************************************************************
+
+# iOS 
+
+***************************************************************************************************************************
+===========================================================================================================================
+% xcrun simctl list
+# Or
+% export PATH="/Applications/Xcode.app/Contents/Developer/usr/bin/":$PATH
+% simctl list
+===========================================================================================================================
+== Device Types ==
+iPhone 16 Pro (com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro)
+iPhone 16 Pro Max (com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro-Max)
+iPhone 16 (com.apple.CoreSimulator.SimDeviceType.iPhone-16)
+iPhone 16 Plus (com.apple.CoreSimulator.SimDeviceType.iPhone-16-Plus)
+iPhone 15 Pro (com.apple.CoreSimulator.SimDeviceType.iPhone-15-Pro)
+iPhone 15 Pro Max (com.apple.CoreSimulator.SimDeviceType.iPhone-15-Pro-Max)
+iPhone 15 (com.apple.CoreSimulator.SimDeviceType.iPhone-15)
+iPhone 15 Plus (com.apple.CoreSimulator.SimDeviceType.iPhone-15-Plus)
+iPhone 14 Pro (com.apple.CoreSimulator.SimDeviceType.iPhone-14-Pro)
+iPhone 14 Pro Max (com.apple.CoreSimulator.SimDeviceType.iPhone-14-Pro-Max)
+iPhone 14 (com.apple.CoreSimulator.SimDeviceType.iPhone-14)
+iPhone 14 Plus (com.apple.CoreSimulator.SimDeviceType.iPhone-14-Plus)
+iPhone SE (3rd generation) (com.apple.CoreSimulator.SimDeviceType.iPhone-SE-3rd-generation)
+iPhone 13 Pro (com.apple.CoreSimulator.SimDeviceType.iPhone-13-Pro)
+iPhone 13 Pro Max (com.apple.CoreSimulator.SimDeviceType.iPhone-13-Pro-Max)
+iPhone 13 (com.apple.CoreSimulator.SimDeviceType.iPhone-13)
+iPhone 13 mini (com.apple.CoreSimulator.SimDeviceType.iPhone-13-mini)
+iPhone 12 Pro (com.apple.CoreSimulator.SimDeviceType.iPhone-12-Pro)
+iPhone 12 Pro Max (com.apple.CoreSimulator.SimDeviceType.iPhone-12-Pro-Max)
+iPhone 12 (com.apple.CoreSimulator.SimDeviceType.iPhone-12)
+iPhone 12 mini (com.apple.CoreSimulator.SimDeviceType.iPhone-12-mini)
+iPhone SE (2nd generation) (com.apple.CoreSimulator.SimDeviceType.iPhone-SE--2nd-generation-)
+iPhone 11 Pro (com.apple.CoreSimulator.SimDeviceType.iPhone-11-Pro)
+iPhone 11 Pro Max (com.apple.CoreSimulator.SimDeviceType.iPhone-11-Pro-Max)
+iPhone 11 (com.apple.CoreSimulator.SimDeviceType.iPhone-11)
+iPhone Xʀ (com.apple.CoreSimulator.SimDeviceType.iPhone-XR)
+iPhone Xs (com.apple.CoreSimulator.SimDeviceType.iPhone-XS)
+iPhone Xs Max (com.apple.CoreSimulator.SimDeviceType.iPhone-XS-Max)
+iPhone X (com.apple.CoreSimulator.SimDeviceType.iPhone-X)
+iPhone 8 (com.apple.CoreSimulator.SimDeviceType.iPhone-8)
+iPhone 8 Plus (com.apple.CoreSimulator.SimDeviceType.iPhone-8-Plus)
+iPhone 7 (com.apple.CoreSimulator.SimDeviceType.iPhone-7)
+iPhone 7 Plus (com.apple.CoreSimulator.SimDeviceType.iPhone-7-Plus)
+iPhone SE (1st generation) (com.apple.CoreSimulator.SimDeviceType.iPhone-SE)
+iPhone 6s (com.apple.CoreSimulator.SimDeviceType.iPhone-6s)
+iPhone 6s Plus (com.apple.CoreSimulator.SimDeviceType.iPhone-6s-Plus)
+iPad Pro 11-inch (M4) (16GB) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-M4-16GB)
+iPad Pro 11-inch (M4) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-M4-8GB)
+iPad Pro 13-inch (M4) (16GB) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M4-16GB)
+iPad Pro 13-inch (M4) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M4-8GB)
+iPad Air 11-inch (M2) (com.apple.CoreSimulator.SimDeviceType.iPad-Air-11-inch-M2)
+iPad Air 13-inch (M2) (com.apple.CoreSimulator.SimDeviceType.iPad-Air-13-inch-M2)
+iPad mini (A17 Pro) (com.apple.CoreSimulator.SimDeviceType.iPad-mini-A17-Pro)
+iPad Pro (11-inch) (4th generation) (16GB) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-4th-generation-16GB)
+iPad Pro (11-inch) (4th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-4th-generation-8GB)
+iPad Pro (12.9-inch) (6th generation) (16GB) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-12-9-inch-6th-generation-16GB)
+iPad Pro (12.9-inch) (6th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-12-9-inch-6th-generation-8GB)
+iPad (10th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-10th-generation)
+iPad Air (5th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Air-5th-generation)
+iPad mini (6th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-mini-6th-generation)
+iPad Pro (11-inch) (3rd generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-3rd-generation)
+iPad Pro (12.9-inch) (5th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro-12-9-inch-5th-generation)
+iPad (9th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-9th-generation)
+iPad Air (4th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Air--4th-generation-)
+iPad (8th generation) (com.apple.CoreSimulator.SimDeviceType.iPad--8th-generation-)
+iPad Air (3rd generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Air--3rd-generation-)
+iPad mini (5th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-mini--5th-generation-)
+iPad Pro (11-inch) (2nd generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--11-inch---2nd-generation-)
+iPad Pro (12.9-inch) (4th generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---4th-generation-)
+iPad Pro (11-inch) (1st generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--11-inch-)
+iPad Pro (12.9-inch) (3rd generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---3rd-generation-)
+iPad (7th generation) (com.apple.CoreSimulator.SimDeviceType.iPad--7th-generation-)
+iPad Pro (10.5-inch) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--10-5-inch-)
+iPad Pro (12.9-inch) (2nd generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---2nd-generation-)
+iPad (6th generation) (com.apple.CoreSimulator.SimDeviceType.iPad--6th-generation-)
+iPad Pro (9.7-inch) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro--9-7-inch-)
+iPad Pro (12.9-inch) (1st generation) (com.apple.CoreSimulator.SimDeviceType.iPad-Pro)
+iPad (5th generation) (com.apple.CoreSimulator.SimDeviceType.iPad--5th-generation-)
+iPad Air 2 (com.apple.CoreSimulator.SimDeviceType.iPad-Air-2)
+iPad mini 4 (com.apple.CoreSimulator.SimDeviceType.iPad-mini-4)
+Apple TV 4K (3rd generation) (com.apple.CoreSimulator.SimDeviceType.Apple-TV-4K-3rd-generation-4K)
+Apple TV 4K (3rd generation) (at 1080p) (com.apple.CoreSimulator.SimDeviceType.Apple-TV-4K-3rd-generation-1080p)
+Apple TV 4K (2nd generation) (com.apple.CoreSimulator.SimDeviceType.Apple-TV-4K-2nd-generation-4K)
+Apple TV 4K (2nd generation) (at 1080p) (com.apple.CoreSimulator.SimDeviceType.Apple-TV-4K-2nd-generation-1080p)
+Apple TV 4K (com.apple.CoreSimulator.SimDeviceType.Apple-TV-4K-4K)
+Apple TV 4K (at 1080p) (com.apple.CoreSimulator.SimDeviceType.Apple-TV-4K-1080p)
+Apple TV (com.apple.CoreSimulator.SimDeviceType.Apple-TV-1080p)
+Apple Watch Series 10 (46mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-10-46mm)
+Apple Watch Series 10 (42mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-10-42mm)
+Apple Watch Series 9 (45mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-9-45mm)
+Apple Watch Series 9 (41mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-9-41mm)
+Apple Watch Ultra 2 (49mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Ultra-2-49mm)
+Apple Watch Series 8 (45mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-8-45mm)
+Apple Watch Series 8 (41mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-8-41mm)
+Apple Watch Ultra (49mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Ultra-49mm)
+Apple Watch SE (44mm) (2nd generation) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-SE-44mm-2nd-generation)
+Apple Watch SE (40mm) (2nd generation) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-SE-40mm-2nd-generation)
+Apple Watch Series 7 (45mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-7-45mm)
+Apple Watch Series 7 (41mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-7-41mm)
+Apple Watch Series 6 (44mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-6-44mm)
+Apple Watch Series 6 (40mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-6-40mm)
+Apple Watch SE (44mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-SE-44mm)
+Apple Watch SE (40mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-SE-40mm)
+Apple Watch Series 5 (44mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-5-44mm)
+Apple Watch Series 5 (40mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-5-40mm)
+Apple Watch Series 4 (44mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-4-44mm)
+Apple Watch Series 4 (40mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-4-40mm)
+Apple Watch Series 3 (42mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-3-42mm)
+Apple Watch Series 3 (38mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-3-38mm)
+Apple Watch Series 2 (42mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-2-42mm)
+Apple Watch Series 2 (38mm) (com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-2-38mm)
+Apple Vision Pro (com.apple.CoreSimulator.SimDeviceType.Apple-Vision-Pro)
+iPod touch (7th generation) (com.apple.CoreSimulator.SimDeviceType.iPod-touch--7th-generation-)
+== Runtimes ==
+iOS 18.2 (18.2 - 22C150) - com.apple.CoreSimulator.SimRuntime.iOS-18-2
+== Devices ==
+-- iOS 18.2 --
+    iPhone 16 Pro (626E102C-617D-4ACB-B1CD-C09ED566134E) (Shutdown) 
+    iPhone 16 Pro Max (954DB13A-4BFB-4492-8BCB-2D4BC2B9CBC7) (Shutdown) 
+    iPhone 16 (30D40CD8-3350-4C59-88A0-64147FEAB72D) (Shutdown) 
+    iPhone 16 Plus (1777CC21-B0BA-45B6-B542-EB1F791E7998) (Shutdown) 
+    iPhone SE (3rd generation) (86D552BD-B8A3-4176-B2DB-3D06E7DBD339) (Shutdown) 
+    iPad Pro 11-inch (M4) (F9D979C8-CFF7-45B4-9B80-08F77CAF5E3D) (Shutdown) 
+    iPad Pro 13-inch (M4) (D3155C1B-74DC-4FAC-973B-9482A31771C0) (Shutdown) 
+    iPad Air 11-inch (M2) (8CD91DC1-5CBF-412C-A796-512A72200857) (Shutdown) 
+    iPad Air 13-inch (M2) (64ADE9F6-8CF3-4BC5-A991-48A2D02809A9) (Shutdown) 
+    iPad mini (A17 Pro) (0122EF72-BF74-4341-A0E6-384CFC6DD5C7) (Shutdown) 
+    iPad (10th generation) (7AE336FD-7EB8-45BD-B539-2F90B2DF5A50) (Shutdown) 
+== Device Pairs ==
+===========================================================================================================================
+***************************************************************************************************************************
+###########################################################################################################################
